@@ -95,10 +95,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
+    <Compile Include="Form_Login.Designer.vb">
+      <DependentUpon>Form_Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.vb">
+    <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
