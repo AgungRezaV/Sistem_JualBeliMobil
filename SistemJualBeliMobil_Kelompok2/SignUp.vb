@@ -4,7 +4,7 @@
         'Login.USERS.realUsernameProperty = TextBoxUsername.Text.ToString()
         'Login.USERS.realPasswordProperty = TextBoxpassword.Text.ToString()
         If TextBoxUsername.Text.Length > 0 And TextBoxpassword.Text.Length > 0 Then
-            Sign_In.USERS.AddUsersDatabase(TextBoxUsername.Text, TextBoxpassword.Text)
+            Sign_In.USERS.AddUsersDatabase(TextBoxUsername.Text, TextBoxpassword.Text, TextBoxEmail.Text)
 
             Me.Close()
         Else

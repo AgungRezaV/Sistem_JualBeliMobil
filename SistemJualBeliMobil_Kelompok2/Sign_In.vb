@@ -19,7 +19,7 @@
 
         If data_user.Count > 0 Then
             USERS.realUsernameProperty = data_user(1)
-            testlogin.Show()
+            FormUtama.Show()
             Me.Hide()
         Else
             MessageBox.Show("Password Anda Salah")
@@ -30,5 +30,10 @@
     Private Sub Buttonsignup_Click(sender As Object, e As EventArgs) Handles Buttonsignup.Click
         Dim signup = New SignUp
         signup.Show()
+    End Sub
+
+    Private Sub BtnDataUser_Click(sender As Object, e As EventArgs) Handles BtnDataUser.Click
+        Dim DataUser = New DataUsers
+        DataUser.Show()
     End Sub
 End Class
