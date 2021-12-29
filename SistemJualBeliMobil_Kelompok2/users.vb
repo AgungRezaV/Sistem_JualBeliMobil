@@ -6,7 +6,6 @@ Public Class users
     'Pendeklarasian untuk username dan password
     Private username As String
     Private password As String
-    Private email As String
 
     'Variabel Untuk Database
     Public Shared dbConn As New MySqlConnection
@@ -45,6 +44,7 @@ Public Class users
     Private DataUsers As New ArrayList()
     Private realUsername As String
     Private realPassword As String
+    '   Private realemail As String
 
     Public Property realUsernameProperty() As String
         Get
@@ -65,29 +65,31 @@ Public Class users
         End Set
     End Property
 
-    Public Function CheckAuth(username As String, ByVal plainPassword As String) As String
+    'Public Function CheckAuth(username As String, ByVal plainPassword As String) As String
 
-        For Each user_data In getDataUsers()
-            Dim username_table As String = user_data(0)
-            Dim password_table As String = user_data(1)
-            Dim email_table As String = user_data(2)
-            If String.Compare(username_table, username) = 0 Then
-                If String.Compare(username_table, username) = 0 And String.Compare(EncrypData(plainPassword), password_table) = 0 Then
-                    Return True
-                Else
-                    Return False
-                End If
-            End If
-        Next
+    '    For Each user_data In getDataUsers()
+    '        Dim username_table As String = user_data(0)
+    '        Dim password_table As String = user_data(1)
+    '        Dim email_table As String = user_data(2)
+    '        If String.Compare(username_table, username) = 0 Then
+    '            If String.Compare(username_table, username) = 0 And String.Compare(EncrypData(plainPassword), password_table) = 0 Then
+    '                Return True
+    '            Else
+    '                Return False
+    '            End If
+    '        End If
+    '    Next
 
-        Return False
-    End Function
+    '    Return False
+    'End Function
 
     Public Function addDataUsers(realUsername As String,
-                                 realPassword As String)
+                                 realPassword As String,
+                                 realEmail As String)
 
         DataUsers.Add({realUsername,
-          EncrypData(realPassword)})
+          EncrypData(realPassword),
+          realEmail})
     End Function
 
     Public Function removeDataKoleksi(index As Integer)
@@ -112,17 +114,19 @@ Public Class users
         Return s.ToString()
     End Function
 
-    Public Function AddUsersDatabase(username_regist As String, password_regist As String)
+    Public Function AddUsersDatabase(username_regist As String, password_regist As String, email_regist As String)
         Try
-            Dim today = Date.Now()
+
 
             dbConn.ConnectionString = "server=" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database=" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO users(username, password, registered_at)
+            sqlQuery = "INSERT INTO users(username, password, email)
                         VALUE('" & username_regist & "','" _
                                 & EncryptMD5(password_regist) & "', '" _
-                                & today.ToString("yyyy/MM/dd") & "')"
+                                 & email_regist & "')"
+
+
 
             Debug.WriteLine(sqlQuery)
 

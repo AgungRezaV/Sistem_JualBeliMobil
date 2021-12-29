@@ -54,14 +54,14 @@ Partial Class SignUp
         '
         'TextBoxpassword
         '
-        Me.TextBoxpassword.Location = New System.Drawing.Point(194, 148)
+        Me.TextBoxpassword.Location = New System.Drawing.Point(194, 110)
         Me.TextBoxpassword.Name = "TextBoxpassword"
         Me.TextBoxpassword.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxpassword.TabIndex = 14
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(194, 105)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(194, 67)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxUsername.TabIndex = 13
@@ -70,7 +70,7 @@ Partial Class SignUp
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 146)
+        Me.Label2.Location = New System.Drawing.Point(69, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 12
@@ -80,7 +80,7 @@ Partial Class SignUp
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(69, 105)
+        Me.Label1.Location = New System.Drawing.Point(69, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 11
@@ -90,7 +90,7 @@ Partial Class SignUp
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(69, 59)
+        Me.Label4.Location = New System.Drawing.Point(69, 145)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(48, 20)
         Me.Label4.TabIndex = 17
@@ -98,7 +98,7 @@ Partial Class SignUp
         '
         'TextBoxEmail
         '
-        Me.TextBoxEmail.Location = New System.Drawing.Point(194, 61)
+        Me.TextBoxEmail.Location = New System.Drawing.Point(194, 147)
         Me.TextBoxEmail.Name = "TextBoxEmail"
         Me.TextBoxEmail.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxEmail.TabIndex = 18

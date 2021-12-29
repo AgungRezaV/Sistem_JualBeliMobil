@@ -34,3 +34,5 @@ C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBe
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.exe
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.xml
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.pdb
+C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataUsers.resources
+C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.FormUtama.resources

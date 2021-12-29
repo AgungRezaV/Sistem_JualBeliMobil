@@ -117,6 +117,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataUsers.Designer.vb">
+      <DependentUpon>DataUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -144,15 +150,18 @@
     <Compile Include="Sign_In.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testlogin.Designer.vb">
-      <DependentUpon>testlogin.vb</DependentUpon>
+    <Compile Include="FormUtama.Designer.vb">
+      <DependentUpon>FormUtama.vb</DependentUpon>
     </Compile>
-    <Compile Include="testlogin.vb">
+    <Compile Include="FormUtama.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DataUsers.resx">
+      <DependentUpon>DataUsers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -164,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

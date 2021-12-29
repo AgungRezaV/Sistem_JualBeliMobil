@@ -28,6 +28,7 @@ Partial Class Sign_In
         Me.TextBoxUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnDataUser = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Buttonsignup
@@ -82,11 +83,21 @@ Partial Class Sign_In
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Username"
         '
+        'BtnDataUser
+        '
+        Me.BtnDataUser.Location = New System.Drawing.Point(86, 177)
+        Me.BtnDataUser.Name = "BtnDataUser"
+        Me.BtnDataUser.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDataUser.TabIndex = 17
+        Me.BtnDataUser.Text = "Data User"
+        Me.BtnDataUser.UseVisualStyleBackColor = True
+        '
         'Sign_In
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(522, 267)
+        Me.Controls.Add(Me.BtnDataUser)
         Me.Controls.Add(Me.Buttonsignup)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.TextBoxpassword)
@@ -106,4 +117,5 @@ Partial Class Sign_In
     Friend WithEvents TextBoxUsername As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents BtnDataUser As Button
 End Class
