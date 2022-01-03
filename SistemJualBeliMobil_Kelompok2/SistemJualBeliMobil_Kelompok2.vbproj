@@ -117,16 +117,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataUsers.Designer.vb">
-      <DependentUpon>DataUsers.vb</DependentUpon>
+    <Compile Include="Class_Mobil.vb" />
+    <Compile Include="Form_Mobil_Hapus.Designer.vb">
+      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
     </Compile>
-    <Compile Include="DataUsers.vb">
+    <Compile Include="Form_Mobil_Hapus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mobil.Designer.vb">
+      <DependentUpon>Form_Mobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mobil_Tambah.Designer.vb">
+      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mobil_Tambah.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -138,44 +152,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SignUp.Designer.vb">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sign_In.Designer.vb">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Sign_In.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUtama.Designer.vb">
-      <DependentUpon>FormUtama.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormUtama.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataUsers.resx">
-      <DependentUpon>DataUsers.vb</DependentUpon>
+    <EmbeddedResource Include="Form_Mobil.resx">
+      <DependentUpon>Form_Mobil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mobil_Hapus.resx">
+      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mobil_Tambah.resx">
+      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sign_In.resx">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUtama.resx">
-      <DependentUpon>FormUtama.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
