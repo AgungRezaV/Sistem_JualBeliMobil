@@ -24,32 +24,44 @@ Partial Class Form_Mobil_Hapus
     Private Sub InitializeComponent()
         Me.LblText = New System.Windows.Forms.Label()
         Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblText
         '
         Me.LblText.AutoSize = True
-        Me.LblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblText.Location = New System.Drawing.Point(200, 34)
+        Me.LblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblText.Location = New System.Drawing.Point(152, 68)
         Me.LblText.Name = "LblText"
-        Me.LblText.Size = New System.Drawing.Size(77, 26)
+        Me.LblText.Size = New System.Drawing.Size(77, 25)
         Me.LblText.TabIndex = 0
-        Me.LblText.Text = "Label1"
+        Me.LblText.Text = "Empty"
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(149, 107)
+        Me.BtnDelete.Location = New System.Drawing.Point(107, 127)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(163, 23)
         Me.BtnDelete.TabIndex = 1
         Me.BtnDelete.Text = "Hapus"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(369, 26)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Apakah anda yakin ingin menghapus"
+        '
         'Form_Mobil_Hapus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(494, 325)
+        Me.ClientSize = New System.Drawing.Size(390, 173)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.LblText)
         Me.Name = "Form_Mobil_Hapus"
@@ -61,4 +73,5 @@ Partial Class Form_Mobil_Hapus
 
     Friend WithEvents LblText As Label
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents Label1 As Label
 End Class

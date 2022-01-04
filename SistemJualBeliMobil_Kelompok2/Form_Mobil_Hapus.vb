@@ -3,7 +3,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        LblText.Text = Form_Mobil.SelectedTableKoleksiNama
+        LblText.Text = Form_Mobil.SelectedTableKoleksiTipeMobil
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub

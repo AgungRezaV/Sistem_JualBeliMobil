@@ -2,6 +2,7 @@
     Public Shared ClassMobil As Class_Mobil
     Public Shared SelectedTableKoleksi
     Public Shared SelectedTableKoleksiNama
+    Public Shared SelectedTableKoleksiTipeMobil
 
     Public Sub New()
         ClassMobil = New Class_Mobil()
@@ -65,7 +66,8 @@
         selectedRow = DataGridView1.Rows(index)
 
         selectedTableKoleksi = selectedRow.Cells(0).Value
-        selectedTableKoleksiNama = selectedRow.Cells(1).Value
+        SelectedTableKoleksiNama = selectedRow.Cells(1).Value
+        SelectedTableKoleksiTipeMobil = selectedRow.Cells(2).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -133,5 +135,10 @@
         CBGaransi.Text = Nothing
         PBFoto.Image = Nothing
         ReloadDataTableDatabase()
+    End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        Dim open_form1 = New Form_Mobil_Hapus()
+        open_form1.Show()
     End Sub
 End Class
