@@ -152,7 +152,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form_Mobil.resx">

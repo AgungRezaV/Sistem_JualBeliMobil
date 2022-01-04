@@ -97,6 +97,27 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
+        ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
+        ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
+        ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
+        ClassMobil.GaransiMobilProperty = CBGaransi.SelectedItem().ToString()
+        ClassMobil.HargaDefaultMobilProperty = Integer.Parse(TBHargaDefault.Text)
+        If RBBaru.Checked Then
+            ClassMobil.KondisiMobilProperty = "Baru"
+        ElseIf RBBekas.Checked Then
+            ClassMobil.KondisiMobilProperty = "Bekas"
+        End If
+
+        ClassMobil.UpdateDataKoleksiByIDDatabase(SelectedTableKoleksi,
+                                              ClassMobil.dirGambarBukuProperty,
+                                              ClassMobil.TipeMobilProperty,
+                                              ClassMobil.TahunPembuatanProperty,
+                                              ClassMobil.KondisiMobilProperty,
+                                              ClassMobil.HargaMobilProperty,
+                                              ClassMobil.GaransiMobilProperty,
+                                              ClassMobil.HargaDefaultMobilProperty)
+
         BtnUpdate.Visible = False
         For Each Control As Control In Me.Controls
             If TypeOf Control Is TextBox Then
