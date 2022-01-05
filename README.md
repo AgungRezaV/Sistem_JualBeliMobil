@@ -73,8 +73,8 @@ Anggota Kelompok : Agung Reza Vergiawan, Yuli, Nadya, Maudy
 * alamat
 
 #### Buku Penjualan 
-id_penjualan
-id_mobil
-id_pembeli
-harga_terjual
-tanggal_penjualan
+* id_penjualan
+* id_mobil
+* id_pembeli
+* harga_terjual
+* tanggal_penjualan
