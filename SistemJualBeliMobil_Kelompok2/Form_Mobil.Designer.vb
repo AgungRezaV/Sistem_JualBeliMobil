@@ -46,6 +46,7 @@ Partial Class Form_Mobil
         Me.TBTahunPembuatan = New System.Windows.Forms.TextBox()
         Me.CBGaransi = New System.Windows.Forms.ComboBox()
         Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.BtnFormJenisMobil = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBKondisiMobil.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,7 +128,7 @@ Partial Class Form_Mobil
         Me.TBJenisMobil.Enabled = False
         Me.TBJenisMobil.Location = New System.Drawing.Point(387, 190)
         Me.TBJenisMobil.Name = "TBJenisMobil"
-        Me.TBJenisMobil.Size = New System.Drawing.Size(187, 20)
+        Me.TBJenisMobil.Size = New System.Drawing.Size(104, 20)
         Me.TBJenisMobil.TabIndex = 8
         '
         'TBTipeMobil
@@ -257,11 +258,21 @@ Partial Class Form_Mobil
         Me.BtnUpdate.Text = "Update"
         Me.BtnUpdate.UseVisualStyleBackColor = True
         '
+        'BtnFormJenisMobil
+        '
+        Me.BtnFormJenisMobil.Location = New System.Drawing.Point(499, 190)
+        Me.BtnFormJenisMobil.Name = "BtnFormJenisMobil"
+        Me.BtnFormJenisMobil.Size = New System.Drawing.Size(75, 23)
+        Me.BtnFormJenisMobil.TabIndex = 26
+        Me.BtnFormJenisMobil.Text = "Edit"
+        Me.BtnFormJenisMobil.UseVisualStyleBackColor = True
+        '
         'Form_Mobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(595, 522)
+        Me.Controls.Add(Me.BtnFormJenisMobil)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.CBGaransi)
         Me.Controls.Add(Me.TBTahunPembuatan)
@@ -318,4 +329,5 @@ Partial Class Form_Mobil
     Friend WithEvents TBTahunPembuatan As TextBox
     Friend WithEvents CBGaransi As ComboBox
     Friend WithEvents BtnUpdate As Button
+    Friend WithEvents BtnFormJenisMobil As Button
 End Class

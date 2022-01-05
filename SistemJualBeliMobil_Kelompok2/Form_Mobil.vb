@@ -13,7 +13,6 @@
         ' This call is required by the designer.
         InitializeComponent()
         'ReloadDataTableDatabase()
-        TBJenisMobil.Text = Testing_JenisMobil_Form.SelectedTableKoleksiJenisMobil
         BtnUpdate.Visible = False
         ' Add any initialization after the InitializeComponent() call.  
     End Sub
@@ -61,6 +60,19 @@
                                                ClassMobil.HargaMobilProperty,
                                                ClassMobil.GaransiMobilProperty,
                                                ClassMobil.HargaDefaultMobilProperty)
+        For Each Control As Control In Me.Controls
+            If TypeOf Control Is TextBox Then
+                Control.Text = String.Empty
+            End If
+        Next
+
+        If String.Compare(ClassMobil.KondisiMobilProperty, "Baru") = 0 Then
+            RBBaru.Checked = False
+        ElseIf String.Compare(ClassMobil.KondisiMobilProperty, "Bekas") = 0 Then
+            RBBekas.Checked = False
+        End If
+        CBGaransi.Text = Nothing
+        PBFoto.Image = Nothing
         ReloadDataTableDatabase()
     End Sub
 
@@ -71,7 +83,7 @@
 
         selectedTableKoleksi = selectedRow.Cells(0).Value
         SelectedTableKoleksiNama = selectedRow.Cells(1).Value
-        SelectedTableKoleksiTipeMobil = selectedRow.Cells(2).Value
+        SelectedTableKoleksiTipeMobil = selectedRow.Cells(3).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -142,5 +154,10 @@
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Dim open_form1 = New Form_Mobil_Hapus()
         open_form1.Show()
+    End Sub
+
+    Private Sub BtnFormJenisMobil_Click(sender As Object, e As EventArgs) Handles BtnFormJenisMobil.Click
+        Dim open_form2 = New Testing_JenisMobil_Form()
+        open_form2.Show()
     End Sub
 End Class

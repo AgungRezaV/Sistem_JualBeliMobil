@@ -15,11 +15,6 @@
         DataGridView1.DataSource = ClassJenisMobil.GetDatabaseJenisMobil
     End Sub
 
-    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
-        Dim Form1 = New Form_Mobil()
-        Form1.Show()
-    End Sub
-
     Private Sub Testing_JenisMobil_Form_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabaseJenisMobil()
     End Sub
@@ -31,5 +26,10 @@
 
         selectedTableKoleksi = selectedRow.Cells(0).Value
         SelectedTableKoleksiJenisMobil = selectedRow.Cells(1).Value
+    End Sub
+
+    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        Form_Mobil.TBJenisMobil.Text = SelectedTableKoleksiJenisMobil
+        Me.Close()
     End Sub
 End Class
