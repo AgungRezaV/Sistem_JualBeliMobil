@@ -1,28 +1,32 @@
-# sistem_perpustakaan
-Anggota Kelompok : Agung Reza Vergiawan, Yuli, Nadya, Maudy
 
-Sistem Jual Beli Mobil
+
+## Sistem Jual Beli Mobil
+
+* Anggota Kelompok : Agung Reza Vergiawan, Yuli, Nadya, Maudy
 
 Class :
+Users
 
-Users,
+Jenis Mobil
 
-Jenis Mobil,
+Mobil
 
-Mobil,
-
-Pembeli,
+Pembeli
 
 Buku Penjualan 
 
 Forms :
+
 Sign in 
+
 Sign Up
 
 Jenis Mobil
+
 Tambah Jenis Mobil
 Edit Jenis Mobil
 Hapus Jenis Mobil
+
 
 Mobil
 Tambah Mobil
@@ -54,4 +58,3 @@ Jenis_mobil (id_jenis, jenis)
 Mobil (id, id_jenis_mobil, tipe mobil, tahun_pembuatan, kondisi, harga, garansi, status_terjual, harga_default)
 Pembeli (id_pembeli, nik, nama, alamat)
 Buku Penjualan (id_penjualan, id_mobil, id_pembeli, harga_terjual,  tanggal_penjualan)
-
