@@ -33,7 +33,6 @@ Tambah Buku Penjualan
 Edit Buku Penjualan
 Hapus Buku Penjualan
 
-
 Fitur:
 Sign In, Sign Out, dan Sign Up
 User merupakan admin yang mengurus penjualan mobil
