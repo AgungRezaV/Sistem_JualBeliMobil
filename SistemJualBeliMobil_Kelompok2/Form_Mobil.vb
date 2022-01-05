@@ -1,20 +1,25 @@
 ﻿Public Class Form_Mobil
-    Public Shared ClassMobil As Class_Mobil
+    Public Shared ClassMobil As ClassMobil
+    Public Shared ClassJenisMobil As ClassJenisMobil
+    Public Shared Testing_JenisMobil As Testing_JenisMobil_Form
     Public Shared SelectedTableKoleksi
     Public Shared SelectedTableKoleksiNama
     Public Shared SelectedTableKoleksiTipeMobil
 
     Public Sub New()
-        ClassMobil = New Class_Mobil()
+        ClassMobil = New ClassMobil()
+        ClassJenisMobil = New ClassJenisMobil()
+        Testing_JenisMobil = New Testing_JenisMobil_Form()
         ' This call is required by the designer.
         InitializeComponent()
         'ReloadDataTableDatabase()
+        TBJenisMobil.Text = Testing_JenisMobil_Form.SelectedTableKoleksiJenisMobil
         BtnUpdate.Visible = False
         ' Add any initialization after the InitializeComponent() call.  
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataGridView1.DataSource = ClassMobil.GetDataKoleksiDatabase()
+        DataGridView1.DataSource = ClassMobil.GetDataKoleksiDatabaseMobil()
     End Sub
 
     Private Sub Form_Mobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -38,7 +43,6 @@
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
-        ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -50,13 +54,13 @@
             ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        ClassMobil.AddDataKoleksiDatabase(ClassMobil.dirGambarBukuProperty,
-                                              ClassMobil.TipeMobilProperty,
-                                              ClassMobil.TahunPembuatanProperty,
-                                              ClassMobil.KondisiMobilProperty,
-                                              ClassMobil.HargaMobilProperty,
-                                              ClassMobil.GaransiMobilProperty,
-                                              ClassMobil.HargaDefaultMobilProperty)
+        ClassMobil.AddDataKoleksiDatabaseMobil(ClassMobil.dirGambarBukuProperty,
+                                               ClassMobil.TipeMobilProperty,
+                                               ClassMobil.TahunPembuatanProperty,
+                                               ClassMobil.KondisiMobilProperty,
+                                               ClassMobil.HargaMobilProperty,
+                                               ClassMobil.GaransiMobilProperty,
+                                               ClassMobil.HargaDefaultMobilProperty)
         ReloadDataTableDatabase()
     End Sub
 
@@ -71,7 +75,7 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim SelectedKoleksi As List(Of String) = ClassMobil.GetDataKoleksiByIDDatabase(SelectedTableKoleksi)
+        Dim SelectedKoleksi As List(Of String) = ClassMobil.GetDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi)
         ClassMobil.dirGambarBukuProperty = SelectedKoleksi(2)
         ClassMobil.TipeMobilProperty = SelectedKoleksi(3)
         ClassMobil.TahunPembuatanProperty = SelectedKoleksi(4)
@@ -82,7 +86,6 @@
 
         PBFoto.Load(ClassMobil.dirGambarBukuProperty)
         PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
-        TBJenisMobil.Text = ClassMobil.JenisMobilProperty
         TBTipeMobil.Text = ClassMobil.TipeMobilProperty
         TBTahunPembuatan.Text = ClassMobil.TahunPembuatanProperty
         TBHarga.Text = ClassMobil.HargaMobilProperty
@@ -99,7 +102,6 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -111,7 +113,7 @@
             ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        ClassMobil.UpdateDataKoleksiByIDDatabase(SelectedTableKoleksi,
+        ClassMobil.UpdateDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi,
                                               ClassMobil.dirGambarBukuProperty,
                                               ClassMobil.TipeMobilProperty,
                                               ClassMobil.TahunPembuatanProperty,

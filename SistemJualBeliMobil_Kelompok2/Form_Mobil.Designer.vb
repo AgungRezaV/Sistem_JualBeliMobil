@@ -124,6 +124,7 @@ Partial Class Form_Mobil
         '
         'TBJenisMobil
         '
+        Me.TBJenisMobil.Enabled = False
         Me.TBJenisMobil.Location = New System.Drawing.Point(387, 190)
         Me.TBJenisMobil.Name = "TBJenisMobil"
         Me.TBJenisMobil.Size = New System.Drawing.Size(187, 20)

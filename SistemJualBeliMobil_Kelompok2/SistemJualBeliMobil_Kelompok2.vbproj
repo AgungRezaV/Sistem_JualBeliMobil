@@ -117,7 +117,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class_Mobil.vb" />
+    <Compile Include="ClassJenisMobil.vb" />
+    <Compile Include="ClassMobil.vb" />
     <Compile Include="Form_Mobil_Hapus.Designer.vb">
       <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
     </Compile>
@@ -152,6 +153,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Testing_JenisMobil_Form.Designer.vb">
+      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing_JenisMobil_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form_Mobil.resx">
@@ -168,6 +175,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing_JenisMobil_Form.resx">
+      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

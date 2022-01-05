@@ -1,8 +1,8 @@
 ﻿Imports System.Text
 Imports MySql.Data.MySqlClient
-Public Class Class_Mobil
+Public Class ClassMobil
     Private ClassGambar
-    Private ClassJenisMobil As String
+    'Private ClassJenisMobil As String
     Private ClassTipeMobil As String
     Private ClassTahunPembuatan As String
     Private ClassKondisi As String
@@ -20,14 +20,14 @@ Public Class Class_Mobil
         End Set
     End Property
 
-    Public Property JenisMobilProperty() As String
-        Get
-            Return ClassJenisMobil
-        End Get
-        Set(ByVal value As String)
-            ClassJenisMobil = value
-        End Set
-    End Property
+    'Public Property JenisMobilProperty() As String
+    '    Get
+    '        Return ClassJenisMobil
+    '    End Get
+    '    Set(ByVal value As String)
+    '        ClassJenisMobil = value
+    '    End Set
+    'End Property
 
     Public Property TipeMobilProperty() As String
         Get
@@ -98,21 +98,23 @@ Public Class Class_Mobil
     Private database As String = "dbmobil"
 
     'Get data FOR Perpus from Database
-    Public Function GetDataKoleksiDatabase() As DataTable
+    Public Function GetDataKoleksiDatabaseMobil() As DataTable
         Dim result As New DataTable
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = " SELECT id_mobil AS 'ID',
-                                    id_jenis_mobil AS 'Jenis Mobil', 
-                                    tipe_mobil AS 'Tipe Mobil',
-                                    tahun_pembuatan AS 'Tahun Pembuatan',
-                                    kondisi AS 'Kondisi',
-                                    harga AS 'Harga',
-                                    garansi AS 'Garansi',
-                                    harga_default AS 'Harga Default'
-                                    FROM tbmobil"
+        sqlCommand.CommandText = " SELECT tm.id_mobil AS 'ID',
+                                    tm.id_jenis_mobil AS 'ID Jenis Mobil',
+                                    jm.jenis_mobil As 'Jenis Mobil',
+                                    tm.tipe_mobil AS 'Tipe Mobil',
+                                    tm.tahun_pembuatan AS 'Tahun Pembuatan',
+                                    tm.kondisi AS 'Kondisi',
+                                    tm.harga AS 'Harga',
+                                    tm.garansi AS 'Garansi',
+                                    tm.harga_default AS 'Harga Default'
+                                    FROM tbmobil AS tm
+                                    JOIN jenismobil AS jm ON tm.id_jenis_mobil=jm.id_jenis_mobil"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -122,13 +124,13 @@ Public Class Class_Mobil
     End Function
     '-----------CLOSE-----------
 
-    Public Function AddDataKoleksiDatabase(dir_gambar As String,
-                                        tipe_mobil As String,
-                                        tahun_pembuatan As String,
-                                        kondisi As String,
-                                        harga As Integer,
-                                        garansi As String,
-                                        harga_default As Integer)
+    Public Function AddDataKoleksiDatabaseMobil(dir_gambar As String,
+                                                tipe_mobil As String,
+                                                tahun_pembuatan As String,
+                                                kondisi As String,
+                                                harga As Integer,
+                                                garansi As String,
+                                                harga_default As Integer)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
@@ -159,7 +161,7 @@ Public Class Class_Mobil
     End Function
 
     'Delete Button di Database
-    Public Function DeleteDataKoleksiByIDDatabase(ID As Integer)
+    Public Function DeleteDataKoleksiByIDDatabaseMobil(ID As Integer)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
@@ -184,17 +186,18 @@ Public Class Class_Mobil
     End Function
     '-------CLOSE--------
 
-    'EDIT BUTTON DATABASE
-    Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
-        Dim result As New List(Of String)
+    'DATABSE UNTUK FORM JENIS MOBIL
 
+    '--------CLOSE----------
+
+    'EDIT BUTTON DATABASE MOBIL
+    Public Function GetDataKoleksiByIDDatabaseMobil(ID As Integer) As List(Of String)
+        Dim result As New List(Of String)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
-
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_mobil,
-                                    id_jenis_mobil,
                                     dir_gambar,
                                     tipe_mobil,
                                     tahun_pembuatan,
@@ -215,14 +218,13 @@ Public Class Class_Mobil
             result.Add(sqlRead.GetString(5).ToString())
             result.Add(sqlRead.GetString(6).ToString())
             result.Add(sqlRead.GetString(7).ToString())
-            result.Add(sqlRead.GetString(8).ToString())
         End While
         sqlRead.Close()
         dbConn.Close()
         Return result
     End Function
 
-    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+    Public Function UpdateDataKoleksiByIDDatabaseMobil(ID As Integer,
                                                   dir_gambar As String,
                                                   tipe_mobil As String,
                                                   tahun_pembuatan As String,

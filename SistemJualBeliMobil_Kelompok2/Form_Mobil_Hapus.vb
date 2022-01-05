@@ -10,7 +10,7 @@
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         'Perpus.Koleksi.RemoveKoleksi(Perpus.ListBoxKoleksi.SelectedItem)
-        Form_Mobil.ClassMobil.DeleteDataKoleksiByIDDatabase(Form_Mobil.SelectedTableKoleksi)
+        Form_Mobil.ClassMobil.DeleteDataKoleksiByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
         Me.Close()
     End Sub
 End Class

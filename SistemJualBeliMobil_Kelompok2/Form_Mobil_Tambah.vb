@@ -9,7 +9,7 @@ Public Class Form_Mobil_Tambah
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        Form_Mobil.DataGridView1.DataSource = Form_Mobil.ClassMobil.GetDataKoleksiDatabase()
+        Form_Mobil.DataGridView1.DataSource = Form_Mobil.ClassMobil.GetDataKoleksiDatabaseMobil()
     End Sub
 
     Private Sub BtnTambahGambar_Click(sender As Object, e As EventArgs) Handles BtnTambahGambar.Click
@@ -26,25 +26,24 @@ Public Class Form_Mobil_Tambah
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Form_Mobil.ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         Form_Mobil.ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         Form_Mobil.ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         Form_Mobil.ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
         Form_Mobil.ClassMobil.GaransiMobilProperty = CBGaransi.SelectedItem().ToString()
         Form_Mobil.ClassMobil.HargaDefaultMobilProperty = Integer.Parse(TBHargaDefault.Text)
         If RBBaru.Checked Then
-            form_mobil.ClassMobil.KondisiMobilProperty = "Baru"
+            Form_Mobil.ClassMobil.KondisiMobilProperty = "Baru"
         ElseIf RBBekas.Checked Then
-            form_mobil.ClassMobil.KondisiMobilProperty = "Bekas"
+            Form_Mobil.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Form_Mobil.ClassMobil.AddDataKoleksiDatabase(Form_Mobil.ClassMobil.dirGambarBukuProperty,
-                                              Form_Mobil.ClassMobil.TipeMobilProperty,
-                                              Form_Mobil.ClassMobil.TahunPembuatanProperty,
-                                              Form_Mobil.ClassMobil.KondisiMobilProperty,
-                                              Form_Mobil.ClassMobil.HargaMobilProperty,
-                                              Form_Mobil.ClassMobil.GaransiMobilProperty,
-                                              Form_Mobil.ClassMobil.HargaDefaultMobilProperty)
+        Form_Mobil.ClassMobil.AddDataKoleksiDatabaseMobil(Form_Mobil.ClassMobil.dirGambarBukuProperty,
+                                                          Form_Mobil.ClassMobil.TipeMobilProperty,
+                                                          Form_Mobil.ClassMobil.TahunPembuatanProperty,
+                                                          Form_Mobil.ClassMobil.KondisiMobilProperty,
+                                                          Form_Mobil.ClassMobil.HargaMobilProperty,
+                                                          Form_Mobil.ClassMobil.GaransiMobilProperty,
+                                                          Form_Mobil.ClassMobil.HargaDefaultMobilProperty)
         ReloadDataTableDatabase()
         Me.Close()
     End Sub
