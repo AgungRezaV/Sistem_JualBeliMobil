@@ -1,14 +1,13 @@
 # sistem_perpustakaan
 Anggota Kelompok : Agung Reza Vergiawan, Yuli, Nadya, Maudy
-
 Sistem Jual Beli Mobil
 
 Class :
 Users
-Jenis Mobil, 
+Jenis Mobil
 Mobil
 Pembeli
-Buku Penjualan, 
+Buku Penjualan 
 
 Forms :
 Sign in 
