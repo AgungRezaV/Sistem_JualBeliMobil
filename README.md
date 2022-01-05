@@ -3,10 +3,10 @@ Anggota Kelompok : Agung Reza Vergiawan, Yuli, Nadya, Maudy
 Sistem Jual Beli Mobil
 
 Class :
-Users
-Jenis Mobil
-Mobil
-Pembeli
+Users,
+Jenis Mobil,
+Mobil,
+Pembeli,
 Buku Penjualan 
 
 Forms :
