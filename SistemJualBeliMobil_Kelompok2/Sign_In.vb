@@ -18,8 +18,10 @@
         'messagebox.show(authstatus)
 
         If data_user.Count > 0 Then
+
             USERS.realUsernameProperty = data_user(1)
-            FormUtama.Show()
+            Dim formpembeli = New DataPembeli
+            formpembeli.Show()
             Me.Hide()
         Else
             MessageBox.Show("Password Anda Salah")

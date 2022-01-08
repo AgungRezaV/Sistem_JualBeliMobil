@@ -14,7 +14,7 @@ Public Class Pembeli
 
     Private server As String = "localhost"
     Private username As String = "root"
-    Private password As String = ""
+    Private password As String = " "
     Private database As String = "sistemjualbelimobil"
 
     Public Property Nikproperty() As String
@@ -59,15 +59,17 @@ Public Class Pembeli
     Public Function GetDataPembeliDatabase() As DataTable
         Dim result As New DataTable
 
-        dbConn.ConnectionString = "server = " + server + ";" + "Nik=" +
-        Nik + ";" + "user id=" + Nama + ";" + "database = " + database
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
+
+        '   dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_pembeli AS 'ID',
-                                 Nik AS 'Nik'
+                                 Nik AS 'Nik',
                                  Nama AS 'Nama Pembeli',
                                  Alamat AS 'Alamat'
-                                  FROM Pembeli"
+                                  FROM pembeli"
 
         sqlRead = sqlCommand.ExecuteReader
 
@@ -81,15 +83,16 @@ Public Class Pembeli
     Public Function AddDataPembeliDatabase(Nik As String,
                                             Nama As String,
                                             Alamat As String)
-        dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
 
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO Pembeli (Nik, Nama, Alamat) 
-                        VALUE ( '" & Nik & "',
-                                '" & Nama & "',
-                                '" & Alamat & "'    )"
+            sqlQuery = "INSERT INTO pembeli(Nik, Nama, Alamat) VALUE('" _
+                                & Nik & "', '" _
+                                & Nama & "', '" _
+                                & Alamat & "')"
 
 
 
@@ -113,7 +116,8 @@ Public Class Pembeli
     Public Function GetDataPembeliByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
-        dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_pembeli,
@@ -144,7 +148,8 @@ Public Class Pembeli
                                                   Nama As String,
                                                   Alamat As String)
 
-        dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
@@ -171,8 +176,8 @@ Public Class Pembeli
 
     Public Function DeleteDataKoleksiByIDDatabase(ID As Integer)
 
-        dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
-
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
