@@ -42,6 +42,7 @@
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
+        ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -53,7 +54,8 @@
             ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        ClassMobil.AddDataKoleksiDatabaseMobil(ClassMobil.dirGambarBukuProperty,
+        ClassMobil.AddDataKoleksiDatabaseMobil(Testing_JenisMobil_Form.selectedTableKoleksi,
+                                               ClassMobil.dirGambarBukuProperty,
                                                ClassMobil.TipeMobilProperty,
                                                ClassMobil.TahunPembuatanProperty,
                                                ClassMobil.KondisiMobilProperty,
@@ -88,14 +90,16 @@
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Dim SelectedKoleksi As List(Of String) = ClassMobil.GetDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi)
-        ClassMobil.dirGambarBukuProperty = SelectedKoleksi(2)
-        ClassMobil.TipeMobilProperty = SelectedKoleksi(3)
-        ClassMobil.TahunPembuatanProperty = SelectedKoleksi(4)
-        ClassMobil.KondisiMobilProperty = SelectedKoleksi(5)
-        ClassMobil.HargaMobilProperty = SelectedKoleksi(6)
-        ClassMobil.GaransiMobilProperty = SelectedKoleksi(7)
-        ClassMobil.HargaDefaultMobilProperty = SelectedKoleksi(8)
+        ClassMobil.JenisMobilProperty = SelectedKoleksi(2)
+        ClassMobil.dirGambarBukuProperty = SelectedKoleksi(3)
+        ClassMobil.TipeMobilProperty = SelectedKoleksi(4)
+        ClassMobil.TahunPembuatanProperty = SelectedKoleksi(5)
+        ClassMobil.KondisiMobilProperty = SelectedKoleksi(6)
+        ClassMobil.HargaMobilProperty = SelectedKoleksi(7)
+        ClassMobil.GaransiMobilProperty = SelectedKoleksi(8)
+        ClassMobil.HargaDefaultMobilProperty = SelectedKoleksi(9)
 
+        TBJenisMobil.Text = ClassMobil.JenisMobilProperty
         PBFoto.Load(ClassMobil.dirGambarBukuProperty)
         PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
         TBTipeMobil.Text = ClassMobil.TipeMobilProperty
@@ -114,6 +118,7 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        ClassMobil.JenisMobilProperty = TBJenisMobil.Text()
         ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -126,13 +131,14 @@
         End If
 
         ClassMobil.UpdateDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi,
-                                              ClassMobil.dirGambarBukuProperty,
-                                              ClassMobil.TipeMobilProperty,
-                                              ClassMobil.TahunPembuatanProperty,
-                                              ClassMobil.KondisiMobilProperty,
-                                              ClassMobil.HargaMobilProperty,
-                                              ClassMobil.GaransiMobilProperty,
-                                              ClassMobil.HargaDefaultMobilProperty)
+                                                Testing_JenisMobil_Form.selectedTableKoleksi,
+                                                  ClassMobil.dirGambarBukuProperty,
+                                                  ClassMobil.TipeMobilProperty,
+                                                  ClassMobil.TahunPembuatanProperty,
+                                                  ClassMobil.KondisiMobilProperty,
+                                                  ClassMobil.HargaMobilProperty,
+                                                  ClassMobil.GaransiMobilProperty,
+                                                  ClassMobil.HargaDefaultMobilProperty)
 
         BtnUpdate.Visible = False
         For Each Control As Control In Me.Controls

@@ -37,7 +37,8 @@ Public Class Form_Mobil_Tambah
             Form_Mobil.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Form_Mobil.ClassMobil.AddDataKoleksiDatabaseMobil(Form_Mobil.ClassMobil.dirGambarBukuProperty,
+        Form_Mobil.ClassMobil.AddDataKoleksiDatabaseMobil(Form_Mobil.ClassMobil.JenisMobilProperty,
+                                                          Form_Mobil.ClassMobil.dirGambarBukuProperty,
                                                           Form_Mobil.ClassMobil.TipeMobilProperty,
                                                           Form_Mobil.ClassMobil.TahunPembuatanProperty,
                                                           Form_Mobil.ClassMobil.KondisiMobilProperty,

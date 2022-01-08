@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 Public Class ClassMobil
     Private ClassGambar
-    'Private ClassJenisMobil As String
+    Private ClassJenisMobil As String
     Private ClassTipeMobil As String
     Private ClassTahunPembuatan As String
     Private ClassKondisi As String
@@ -20,14 +20,14 @@ Public Class ClassMobil
         End Set
     End Property
 
-    'Public Property JenisMobilProperty() As String
-    '    Get
-    '        Return ClassJenisMobil
-    '    End Get
-    '    Set(ByVal value As String)
-    '        ClassJenisMobil = value
-    '    End Set
-    'End Property
+    Public Property JenisMobilProperty() As String
+        Get
+            Return ClassJenisMobil
+        End Get
+        Set(ByVal value As String)
+            ClassJenisMobil = value
+        End Set
+    End Property
 
     Public Property TipeMobilProperty() As String
         Get
@@ -124,7 +124,8 @@ Public Class ClassMobil
     End Function
     '-----------CLOSE-----------
 
-    Public Function AddDataKoleksiDatabaseMobil(dir_gambar As String,
+    Public Function AddDataKoleksiDatabaseMobil(id_jenis_mobil As Integer,
+                                                dir_gambar As String,
                                                 tipe_mobil As String,
                                                 tahun_pembuatan As String,
                                                 kondisi As String,
@@ -136,7 +137,8 @@ Public Class ClassMobil
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO tbmobil(dir_gambar, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUE('" _
+            sqlQuery = "INSERT INTO tbmobil(id_jenis_mobil, dir_gambar, tipe_mobil, tahun_pembuatan, kondisi, harga, garansi, harga_default) VALUE('" _
+            & id_jenis_mobil & "', '" _
             & dir_gambar & "', '" _
             & tipe_mobil & "', '" _
             & tahun_pembuatan & "', '" _
@@ -197,15 +199,18 @@ Public Class ClassMobil
                                 + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_mobil,
-                                    dir_gambar,
-                                    tipe_mobil,
-                                    tahun_pembuatan,
-                                    kondisi,
-                                    harga,
-                                    garansi,
-                                    harga_default
-                                    FROM tbmobil
+        sqlCommand.CommandText = "SELECT tm.id_mobil,
+                                    tm.id_jenis_mobil,
+                                    jm.jenis_mobil,
+                                    tm.dir_gambar,
+                                    tm.tipe_mobil,
+                                    tm.tahun_pembuatan,
+                                    tm.kondisi,
+                                    tm.harga,
+                                    tm.garansi,
+                                    tm.harga_default
+                                    FROM tbmobil as tm
+                                    JOIN jenismobil AS jm ON tm.id_jenis_mobil=jm.id_jenis_mobil
                                     WHERE id_mobil='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader
@@ -218,6 +223,8 @@ Public Class ClassMobil
             result.Add(sqlRead.GetString(5).ToString())
             result.Add(sqlRead.GetString(6).ToString())
             result.Add(sqlRead.GetString(7).ToString())
+            result.Add(sqlRead.GetString(8).ToString())
+            result.Add(sqlRead.GetString(9).ToString())
         End While
         sqlRead.Close()
         dbConn.Close()
@@ -225,19 +232,21 @@ Public Class ClassMobil
     End Function
 
     Public Function UpdateDataKoleksiByIDDatabaseMobil(ID As Integer,
-                                                  dir_gambar As String,
-                                                  tipe_mobil As String,
-                                                  tahun_pembuatan As String,
-                                                  kondisi As String,
-                                                  harga As Integer,
-                                                  garansi As String,
-                                                  harga_default As Integer)
+                                                       id_jenis_mobil As Integer,
+                                                       dir_gambar As String,
+                                                       tipe_mobil As String,
+                                                       tahun_pembuatan As String,
+                                                       kondisi As String,
+                                                       harga As Integer,
+                                                       garansi As String,
+                                                       harga_default As Integer)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE tbmobil SET " &
+            "id_jenis_mobil='" & id_jenis_mobil & "', " &
             "dir_gambar='" & dir_gambar & "', " &
             "tipe_mobil='" & tipe_mobil & "', " &
             "tahun_pembuatan='" & tahun_pembuatan & "', " &

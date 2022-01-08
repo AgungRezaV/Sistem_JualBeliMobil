@@ -2,13 +2,13 @@
     Public Shared SelectedTableKoleksiJenisMobil
     Public Shared selectedTableKoleksi
     Public Shared ClassJenisMobil As ClassJenisMobil
+    Public Shared SelectedTableKoleksiNama As String
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
         ClassJenisMobil = New ClassJenisMobil()
         ' Add any initialization after the InitializeComponent() call.
-
     End Sub
 
     Private Sub ReloadDataTableDatabaseJenisMobil()
@@ -29,6 +29,7 @@
     End Sub
 
     Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        Form_Mobil.ClassMobil.JenisMobilProperty = SelectedTableKoleksiJenisMobil
         Form_Mobil.TBJenisMobil.Text = SelectedTableKoleksiJenisMobil
         Me.Close()
     End Sub
