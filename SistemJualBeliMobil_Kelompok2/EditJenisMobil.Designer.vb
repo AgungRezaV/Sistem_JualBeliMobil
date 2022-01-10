@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class TambahJenisMobil
+Partial Class EditJenisMobil
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -29,40 +29,40 @@ Partial Class TambahJenisMobil
         '
         'BtnTmbhJenis
         '
-        Me.BtnTmbhJenis.Location = New System.Drawing.Point(377, 108)
+        Me.BtnTmbhJenis.Location = New System.Drawing.Point(379, 95)
         Me.BtnTmbhJenis.Name = "BtnTmbhJenis"
         Me.BtnTmbhJenis.Size = New System.Drawing.Size(75, 23)
-        Me.BtnTmbhJenis.TabIndex = 8
-        Me.BtnTmbhJenis.Text = "Tambah"
+        Me.BtnTmbhJenis.TabIndex = 11
+        Me.BtnTmbhJenis.Text = "Edit"
         Me.BtnTmbhJenis.UseVisualStyleBackColor = True
         '
         'TxtboxJenis
         '
-        Me.TxtboxJenis.Location = New System.Drawing.Point(209, 48)
+        Me.TxtboxJenis.Location = New System.Drawing.Point(211, 35)
         Me.TxtboxJenis.Name = "TxtboxJenis"
         Me.TxtboxJenis.Size = New System.Drawing.Size(243, 20)
-        Me.TxtboxJenis.TabIndex = 7
+        Me.TxtboxJenis.TabIndex = 10
         '
         'lblJenis
         '
         Me.lblJenis.AutoSize = True
         Me.lblJenis.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblJenis.Location = New System.Drawing.Point(19, 47)
+        Me.lblJenis.Location = New System.Drawing.Point(21, 34)
         Me.lblJenis.Name = "lblJenis"
         Me.lblJenis.Size = New System.Drawing.Size(111, 19)
-        Me.lblJenis.TabIndex = 6
+        Me.lblJenis.TabIndex = 9
         Me.lblJenis.Text = "Jenis Mobil :"
         '
-        'TambahJenisMobil
+        'EditJenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(488, 157)
+        Me.ClientSize = New System.Drawing.Size(484, 132)
         Me.Controls.Add(Me.BtnTmbhJenis)
         Me.Controls.Add(Me.TxtboxJenis)
         Me.Controls.Add(Me.lblJenis)
-        Me.Name = "TambahJenisMobil"
-        Me.Text = "TambahJenisMobil"
+        Me.Name = "EditJenisMobil"
+        Me.Text = "EditJenisMobil"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

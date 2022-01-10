@@ -117,10 +117,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataUsers.Designer.vb">
-      <DependentUpon>DataUsers.vb</DependentUpon>
+    <Compile Include="ClassJenisMobil.vb" />
+    <Compile Include="EditJenisMobil.Designer.vb">
+      <DependentUpon>EditJenisMobil.vb</DependentUpon>
     </Compile>
-    <Compile Include="DataUsers.vb">
+    <Compile Include="EditJenisMobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusJenis.Designer.vb">
+      <DependentUpon>HapusJenis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusJenis.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JenisMobil.Designer.vb">
@@ -144,35 +151,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SignUp.Designer.vb">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sign_In.Designer.vb">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Sign_In.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUtama.Designer.vb">
-      <DependentUpon>FormUtama.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormUtama.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TambahJenisMobil.Designer.vb">
       <DependentUpon>TambahJenisMobil.vb</DependentUpon>
     </Compile>
     <Compile Include="TambahJenisMobil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataUsers.resx">
-      <DependentUpon>DataUsers.vb</DependentUpon>
+    <EmbeddedResource Include="EditJenisMobil.resx">
+      <DependentUpon>EditJenisMobil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusJenis.resx">
+      <DependentUpon>HapusJenis.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JenisMobil.resx">
       <DependentUpon>JenisMobil.vb</DependentUpon>
@@ -182,15 +173,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sign_In.resx">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUtama.resx">
-      <DependentUpon>FormUtama.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TambahJenisMobil.resx">
       <DependentUpon>TambahJenisMobil.vb</DependentUpon>
