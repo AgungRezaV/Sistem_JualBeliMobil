@@ -116,8 +116,7 @@
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
+HEAD
     <Compile Include="DataPembeli.Designer.vb">
       <DependentUpon>DataPembeli.vb</DependentUpon>
     </Compile>
@@ -126,12 +125,11 @@
     </Compile>
     <Compile Include="DataUsers.Designer.vb">
       <DependentUpon>DataUsers.vb</DependentUpon>
-=======
     <Compile Include="ClassJenisMobil.vb" />
     <Compile Include="ClassMobil.vb" />
     <Compile Include="Form_Mobil_Hapus.Designer.vb">
       <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
->>>>>>> origin/agung
+origin/agung
     </Compile>
     <Compile Include="Form_Mobil_Hapus.vb">
       <SubType>Form</SubType>
@@ -176,23 +174,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+HEAD
     <Compile Include="Pembeli.vb" />
->>>>>>> ae57443e9f745cac5f70f30b741f37733e188038
+ae57443e9f745cac5f70f30b741f37733e188038
     <Compile Include="SignUp.Designer.vb">
       <DependentUpon>SignUp.vb</DependentUpon>
-=======
     <Compile Include="Testing_JenisMobil_Form.Designer.vb">
       <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
->>>>>>> origin/agung
+origin/agung
     </Compile>
     <Compile Include="Testing_JenisMobil_Form.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
+HEAD
     <Compile Include="Sign_In.Designer.vb">
       <DependentUpon>Sign_In.vb</DependentUpon>
     </Compile>
@@ -219,7 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataUsers.resx">
       <DependentUpon>DataUsers.vb</DependentUpon>
-=======
     <Compile Include="Form_Login.Designer.vb">
       <DependentUpon>Form_Login.vb</DependentUpon>
     </Compile>
@@ -230,14 +223,13 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
->>>>>>> origin/nadya
+origin/nadya
     </EmbeddedResource>
     <EmbeddedResource Include="EditDataPembeli.resx">
       <DependentUpon>EditDataPembeli.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapusDataPembeli.resx">
       <DependentUpon>HapusDataPembeli.vb</DependentUpon>
-=======
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form_Mobil.resx">
@@ -248,7 +240,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Mobil_Tambah.resx">
       <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
->>>>>>> origin/agung
+origin/agung
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
