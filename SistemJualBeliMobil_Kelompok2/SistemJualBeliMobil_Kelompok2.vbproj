@@ -117,10 +117,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataPembeli.Designer.vb">
+      <DependentUpon>DataPembeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataPembeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataUsers.Designer.vb">
       <DependentUpon>DataUsers.vb</DependentUpon>
     </Compile>
     <Compile Include="DataUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDataPembeli.Designer.vb">
+      <DependentUpon>EditDataPembeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditDataPembeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusDataPembeli.Designer.vb">
+      <DependentUpon>HapusDataPembeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusDataPembeli.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -139,6 +157,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Compile Include="Pembeli.vb" />
+>>>>>>> ae57443e9f745cac5f70f30b741f37733e188038
     <Compile Include="SignUp.Designer.vb">
       <DependentUpon>SignUp.vb</DependentUpon>
     </Compile>
@@ -157,9 +179,18 @@
     <Compile Include="FormUtama.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TambahDataPembeli.Designer.vb">
+      <DependentUpon>TambahDataPembeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahDataPembeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DataPembeli.resx">
+      <DependentUpon>DataPembeli.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataUsers.resx">
       <DependentUpon>DataUsers.vb</DependentUpon>
 =======
@@ -175,6 +206,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
 >>>>>>> origin/nadya
     </EmbeddedResource>
+    <EmbeddedResource Include="EditDataPembeli.resx">
+      <DependentUpon>EditDataPembeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusDataPembeli.resx">
+      <DependentUpon>HapusDataPembeli.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -189,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahDataPembeli.resx">
+      <DependentUpon>TambahDataPembeli.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

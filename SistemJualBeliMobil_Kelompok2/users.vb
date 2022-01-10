@@ -92,10 +92,6 @@ Public Class users
           realEmail})
     End Function
 
-    Public Function removeDataKoleksi(index As Integer)
-        DataUsers.RemoveAt(index)
-    End Function
-
     Public ReadOnly Property getDataUsers() As ArrayList
         Get
             Return DataUsers
@@ -142,6 +138,7 @@ Public Class users
         End Try
     End Function
 
+
     Public Function CheckAuthDatabase(username_login As String, password_login As String) As List(Of String)
 
         Try
@@ -176,5 +173,22 @@ Public Class users
         End Try
     End Function
 
+    Public Function GetDataUsersFromDatabase() As DataTable
+        Dim result_users As New DataTable
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username_db + " ;" _
+                                + "password = " + password_db + " ;" + "database = " + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = " SELECT id_user AS 'ID',
+                                    username AS 'Username', 
+                                   Email As 'Email'
+                                    FROM users"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result_users.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return result_users
+    End Function
 
 End Class
