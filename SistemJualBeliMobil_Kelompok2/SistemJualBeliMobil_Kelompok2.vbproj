@@ -117,6 +117,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DataPembeli.Designer.vb">
       <DependentUpon>DataPembeli.vb</DependentUpon>
     </Compile>
@@ -125,8 +126,26 @@
     </Compile>
     <Compile Include="DataUsers.Designer.vb">
       <DependentUpon>DataUsers.vb</DependentUpon>
+=======
+    <Compile Include="ClassJenisMobil.vb" />
+    <Compile Include="ClassMobil.vb" />
+    <Compile Include="Form_Mobil_Hapus.Designer.vb">
+      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
+>>>>>>> origin/agung
     </Compile>
-    <Compile Include="DataUsers.vb">
+    <Compile Include="Form_Mobil_Hapus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mobil.Designer.vb">
+      <DependentUpon>Form_Mobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mobil_Tambah.Designer.vb">
+      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Mobil_Tambah.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditDataPembeli.Designer.vb">
@@ -145,6 +164,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -158,15 +178,21 @@
     </Compile>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <Compile Include="Pembeli.vb" />
 >>>>>>> ae57443e9f745cac5f70f30b741f37733e188038
     <Compile Include="SignUp.Designer.vb">
       <DependentUpon>SignUp.vb</DependentUpon>
+=======
+    <Compile Include="Testing_JenisMobil_Form.Designer.vb">
+      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
+>>>>>>> origin/agung
     </Compile>
-    <Compile Include="SignUp.vb">
+    <Compile Include="Testing_JenisMobil_Form.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Sign_In.Designer.vb">
       <DependentUpon>Sign_In.vb</DependentUpon>
     </Compile>
@@ -211,6 +237,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HapusDataPembeli.resx">
       <DependentUpon>HapusDataPembeli.vb</DependentUpon>
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_Mobil.resx">
+      <DependentUpon>Form_Mobil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mobil_Hapus.resx">
+      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mobil_Tambah.resx">
+      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
+>>>>>>> origin/agung
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -218,14 +256,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sign_In.resx">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUtama.resx">
-      <DependentUpon>FormUtama.vb</DependentUpon>
+    <EmbeddedResource Include="Testing_JenisMobil_Form.resx">
+      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TambahDataPembeli.resx">
       <DependentUpon>TambahDataPembeli.vb</DependentUpon>
