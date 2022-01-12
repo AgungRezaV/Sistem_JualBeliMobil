@@ -1,18 +1,20 @@
 ﻿Public Class DatabaseJenisMobil
-    Public Shared SelectedTableKoleksiJenisMobil
-    Public Shared selectedTableKoleksi
-    Public Shared ClassJenisMobil As ClassJenisMobil
-    Public Shared SelectedTableKoleksiNama As String
+
+    Public Shared ClassMobil As ClassMobil
+
+    Public Shared selectedTable As Integer
+    Public Shared SelectedTableJenisMobil As String
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
-        ClassJenisMobil = New ClassJenisMobil()
+
+        ClassMobil = New ClassMobil()
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
     Private Sub ReloadDataTableDatabaseJenisMobil()
-        DataGridView1.DataSource = ClassJenisMobil.GetDataKoleksiDatabase
+        DataGridView1.DataSource = Sign_In.ClassJenisMobil.GetDataKoleksiDatabaseJenisMobil()
     End Sub
 
     Private Sub Testing_JenisMobil_Form_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -24,13 +26,19 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridView1.Rows(index)
 
-        selectedTableKoleksi = selectedRow.Cells(0).Value
-        SelectedTableKoleksiJenisMobil = selectedRow.Cells(1).Value
+        selectedTable = selectedRow.Cells(0).Value
+        SelectedTableJenisMobil = selectedRow.Cells(1).Value
     End Sub
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
-        Form_Mobil.ClassMobil.JenisMobilProperty = SelectedTableKoleksiJenisMobil
-        Form_Mobil.TBJenisMobil.Text = SelectedTableKoleksiJenisMobil
+        If selectedTable = 0 Then
+            MessageBox.Show("Gakada nilai")
+        Else
+            ClassMobil.JenisMobilProperty = SelectedTableJenisMobil
+            Form_Mobil.Activate()
+            MessageBox.Show(ClassMobil.JenisMobilProperty)
+        End If
+
         Me.Close()
     End Sub
 End Class

@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub BtnHapusPenjualan_Click(sender As Object, e As EventArgs) Handles BtnHapusPenjualan.Click
-        BukuPenjualan.Penjualan.DeleteDataKoleksiByIDDatabase(BukuPenjualan.selectedtablepenjualan)
+        Sign_In.Penjualan.DeleteDataKoleksiByIDDatabase(BukuPenjualan.selectedtablepenjualan)
         Me.Close()
     End Sub
 

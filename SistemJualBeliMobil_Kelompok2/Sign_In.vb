@@ -1,6 +1,12 @@
 ﻿Public Class Sign_In
     Public Shared USERS As users
+    Public Shared ClassMobil As ClassMobil
+    Public Shared Penjualan As Penjualan
+    Public Shared ClassJenisMobil As ClassJenisMobil
+    Public Shared Pembeli As Pembeli
+    Public Shared Testing_JenisMobil As DatabaseJenisMobil
 
+    Public Shared Form_Mobil As Form_Mobil
 
     Public Sub New()
 
@@ -9,6 +15,12 @@
 
         ' Add any initialization after the InitializeComponent() call.
         USERS = New users
+        ClassMobil = New ClassMobil()
+        Penjualan = New Penjualan()
+        ClassJenisMobil = New ClassJenisMobil()
+        Pembeli = New Pembeli()
+        Form_Mobil = New Form_Mobil()
+
     End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim plainUsername As String = TextBoxUsername.Text

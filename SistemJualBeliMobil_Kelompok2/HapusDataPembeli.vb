@@ -9,7 +9,7 @@
 
     End Sub
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
-        DataPembeli.Pembeli.DeleteDataKoleksiByIDDatabase(DataPembeli.SelectedId)
+        Sign_In.Pembeli.DeleteDataKoleksiByIDDatabase(DataPembeli.SelectedId)
         Me.Close()
     End Sub
 End Class

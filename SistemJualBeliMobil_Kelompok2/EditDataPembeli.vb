@@ -6,16 +6,19 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        TextBoxNik.Text = DataPembeli.Pembeli.Nikproperty
-        TextBoxNama.Text = DataPembeli.Pembeli.NamaProperty
-        RichTextBoxAlmt.Text = DataPembeli.Pembeli.AlamatProperty
+        TextBoxNik.Text = Sign_In.Pembeli.Nikproperty
+        TextBoxNama.Text = Sign_In.Pembeli.NamaProperty
+        RichTextBoxAlmt.Text = Sign_In.Pembeli.AlamatProperty
     End Sub
     Private Sub ButtonEditData_Click(sender As Object, e As EventArgs) Handles ButtonEditData.Click
-        DataPembeli.Pembeli.Nikproperty = TextBoxNik.Text.ToString
-        DataPembeli.Pembeli.NamaProperty = TextBoxNama.Text.ToString()
-        DataPembeli.Pembeli.AlamatProperty = RichTextBoxAlmt.Text.ToString()
+        Sign_In.Pembeli.Nikproperty = TextBoxNik.Text.ToString
+        Sign_In.Pembeli.NamaProperty = TextBoxNama.Text.ToString()
+        Sign_In.Pembeli.AlamatProperty = RichTextBoxAlmt.Text.ToString()
 
-        DataPembeli.Pembeli.UpdateDataKoleksiByIDDatabase(DataPembeli.SelectedId, DataPembeli.Pembeli.Nikproperty, DataPembeli.Pembeli.NamaProperty, DataPembeli.Pembeli.AlamatProperty)
+        Sign_In.Pembeli.UpdateDataKoleksiByIDDatabase(DataPembeli.SelectedId,
+                                                            Sign_In.Pembeli.Nikproperty,
+                                                            Sign_In.Pembeli.NamaProperty,
+                                                            Sign_In.Pembeli.AlamatProperty)
         Me.Close()
     End Sub
 End Class

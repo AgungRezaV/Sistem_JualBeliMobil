@@ -1,8 +1,29 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class Penjualan
+    Private CTipeMobil As String
+    Private CNamaPembeli As String
     Private CHarga_Terjual As Integer
     Private CTanggal_Penjualan As String
+
+    Public Property CTipeMobilproperty() As String
+        Get
+            Return CTipeMobil
+        End Get
+        Set(ByVal value As String)
+            CTipeMobil = value
+        End Set
+    End Property
+
+    Public Property CNamaPembeliproperty() As String
+        Get
+            Return CNamaPembeli
+        End Get
+        Set(ByVal value As String)
+            CNamaPembeli = value
+        End Set
+    End Property
+
     Public Property harga_terjualproperty() As String
         Get
             Return CHarga_Terjual
@@ -38,10 +59,16 @@ Public Class Penjualan
                                     + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = " SELECT id_penjualan AS 'ID',
-                                    harga_terjual AS 'Harga Terjual',
-                                    tanggal_terjual AS 'Tanggal Penjualan'
-                                    FROM tbpenjualan"
+        sqlCommand.CommandText = " SELECT tp.id_penjualan AS 'ID',
+                                    tp.id_mobil AS 'ID Mobil',
+                                    tm.id_mobil AS 'Tipe Mobil',
+                                    tp.id_pembeli AS 'ID Pembeli',
+                                    pb.id_pembeli AS 'Nama Pembeli',
+                                    tp.harga_terjual AS 'Harga Terjual',
+                                    tp.tanggal_terjual AS 'Tanggal Penjualan'
+                                    FROM tbpenjualan AS tp
+                                    JOIN tbmobil AS tm ON tp.id_mobil=tm.id_mobil
+                                    JOIN pembeli AS pb ON tp.id_pembeli=pb.id_pembeli"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -50,15 +77,20 @@ Public Class Penjualan
         Return result
     End Function
 
-    Public Function AddDataKoleksiDatabase(harga_terjual As Integer,
-                                               tanggal_terjual As Date)
+    Public Function AddDataKoleksiDatabase(id_mobil As Integer,
+                                           id_pembeli As Integer,
+                                           harga_terjual As Integer,
+                                           tanggal_terjual As Date)
+
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                     + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO tbpenjualan(harga_terjual, tanggal_terjual) VALUE('" _
-                & harga_terjual & "', '" _
+            sqlQuery = "INSERT INTO tbpenjualan(id_mobil, id_pembeli, harga_terjual, tanggal_terjual) VALUE('" _
+            & id_mobil & "', '" _
+            & id_pembeli & "', '" _
+            & harga_terjual & "', '" _
                 & tanggal_terjual.ToString("yyyy/MM/dd") & "')"
             Debug.WriteLine(sqlQuery)
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -83,10 +115,16 @@ Public Class Penjualan
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_penjualan,
-                                    harga_terjual,
-                                    tanggal_terjual
-                                    FROM tbpenjualan
+        sqlCommand.CommandText = "SELECT tp.id_penjualan,
+                                    tp.id_mobil,
+                                    tm.tipe_mobil,
+                                    tp.id_pembeli,
+                                    pb.Nama,
+                                    tp.harga_terjual,
+                                    tp.tanggal_terjual
+                                    FROM tbpenjualan AS tp
+                                    JOIN tbmobil AS tm ON tp.id_mobil=tm.id_mobil
+                                    JOIN pembeli AS pb ON tp.id_pembeli=pb.id_pembeli
                                     WHERE id_penjualan='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader
@@ -94,6 +132,10 @@ Public Class Penjualan
             result.Add(sqlRead.GetString(0).ToString())
             result.Add(sqlRead.GetString(1).ToString())
             result.Add(sqlRead.GetString(2).ToString())
+            result.Add(sqlRead.GetString(3).ToString())
+            result.Add(sqlRead.GetString(4).ToString())
+            result.Add(sqlRead.GetString(5).ToString())
+            result.Add(sqlRead.GetString(6).ToString())
         End While
         sqlRead.Close()
         dbConn.Close()
@@ -101,14 +143,18 @@ Public Class Penjualan
     End Function
 
     Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
-                                                      harga_terjual As Integer,
-                                                      tanggal_terjual As Date)
+                                                  id_mobil As Integer,
+                                                  id_pembeli As Integer,
+                                                  harga_terjual As Integer,
+                                                  tanggal_terjual As Date)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                     + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE tbpenjualan SET " &
+                "id_mobil='" & id_mobil & "', " &
+                "id_pembeli='" & id_pembeli & "', " &
                 "harga_terjual='" & harga_terjual & "', " &
                 "tanggal_terjual='" & tanggal_terjual.ToString("yyyy/MM/dd") & "' " &
                 "WHERE id_penjualan='" & ID & "'"

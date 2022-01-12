@@ -1,12 +1,21 @@
 ﻿Public Class TambahBukuPenjualan
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+    End Sub
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
-        BukuPenjualan.Penjualan.harga_terjualproperty = TxtBoxHargaTerjual.Text.ToString()
-        BukuPenjualan.Penjualan.tanggal_penjualan = DateTimePickerJual.Value.ToString("yyyy/MM/dd")
-
-        BukuPenjualan.Penjualan.AddDataKoleksiDatabase(BukuPenjualan.Penjualan.harga_terjualproperty, BukuPenjualan.Penjualan.tanggal_penjualan)
-
+        Sign_In.Penjualan.CTipeMobilproperty = TextBoxMobilTerjual.Text.ToString()
+        Sign_In.Penjualan.CNamaPembeliproperty = TextBoxPembeli.Text.ToString()
+        Sign_In.Penjualan.harga_terjualproperty = TxtBoxHargaTerjual.Text.ToString()
+        Sign_In.Penjualan.tanggal_penjualan = DateTimePickerJual.Value.ToString("yyyy/MM/dd")
+        Sign_In.Penjualan.AddDataKoleksiDatabase(DatabaseMobil.selectedDatabaseMobil,
+                                                       DatabasePembeli.selectedDatabasePembeli,
+                                                        Sign_In.Penjualan.harga_terjualproperty,
+                                                        Sign_In.Penjualan.tanggal_penjualan)
         Me.Close()
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

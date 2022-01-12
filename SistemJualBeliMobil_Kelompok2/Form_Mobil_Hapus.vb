@@ -10,16 +10,16 @@
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         'Perpus.Koleksi.RemoveKoleksi(Perpus.ListBoxKoleksi.SelectedItem)
-        Form_Mobil.ClassMobil.DeleteDataKoleksiByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
+        Sign_In.ClassMobil.DeleteDataKoleksiByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
         For Each Control As Control In Form_Mobil.Controls
             If TypeOf Control Is TextBox Then
                 Control.Text = String.Empty
             End If
         Next
 
-        If String.Compare(Form_Mobil.ClassMobil.KondisiMobilProperty, "Baru") = 0 Then
+        If String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Baru") = 0 Then
             Form_Mobil.RBBaru.Checked = False
-        ElseIf String.Compare(Form_Mobil.ClassMobil.KondisiMobilProperty, "Bekas") = 0 Then
+        ElseIf String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Bekas") = 0 Then
             Form_Mobil.RBBekas.Checked = False
         End If
         Form_Mobil.CBGaransi.Text = Nothing

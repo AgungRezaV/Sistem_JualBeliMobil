@@ -24,7 +24,7 @@ Public Class ClassJenisMobil
     Private password As String = " "
     Private database As String = "dbmobil"
 
-    Public Function GetDataKoleksiDatabase() As DataTable
+    Public Function GetDataKoleksiDatabaseJenisMobil() As DataTable
         Dim result As New DataTable
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database

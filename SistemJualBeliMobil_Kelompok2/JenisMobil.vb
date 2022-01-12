@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DG.DataSource = ClassJenisMobil.GetDataKoleksiDatabase()
+        DG.DataSource = ClassJenisMobil.GetDataKoleksiDatabaseJenisMobil()
     End Sub
 
     Private Sub JenisMobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated

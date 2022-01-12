@@ -22,5 +22,20 @@ SistemJualBeliMobil_Kelompok2
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:SistemJualBeliMobil_Kelompok2.My.Resources.Resources._11zon_cropped">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemJualBeliMobil_Kelompok2.My.Resources.Resources._11zon_cropped_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

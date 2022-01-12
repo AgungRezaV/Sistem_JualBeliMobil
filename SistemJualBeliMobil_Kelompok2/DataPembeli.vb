@@ -1,7 +1,6 @@
 ﻿
 Public Class DataPembeli
 
-    Public Shared Pembeli As Pembeli
     Public Shared SelectedId
     Public Shared SelectedTableNik
     Public Shared SelectedTableNama
@@ -11,7 +10,6 @@ Public Class DataPembeli
 
         ' This call is required by the designer.
         InitializeComponent()
-        Pembeli = New Pembeli()
         reloaddatatabledatabase()
         ' Add any initialization after the InitializeComponent() call.
 
@@ -26,16 +24,16 @@ Public Class DataPembeli
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridView1.Rows(index)
 
-        selectedId = selectedRow.Cells(0).Value
+        SelectedId = selectedRow.Cells(0).Value
         SelectedTableNik = selectedRow.Cells(1).Value
         SelectedTableNama = selectedRow.Cells(2).Value
         SelectedTableAlamat = selectedRow.Cells(3).Value
     End Sub
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        Dim SelectedDataPembeli As List(Of String) = Pembeli.GetDataPembeliByIDDatabase(SelectedId)
-        Pembeli.Nikproperty = SelectedDataPembeli(1)
-        Pembeli.NamaProperty = SelectedDataPembeli(2)
-        Pembeli.AlamatProperty = SelectedDataPembeli(3)
+        Dim SelectedDataPembeli As List(Of String) = Sign_In.Pembeli.GetDataPembeliByIDDatabase(SelectedId)
+        Sign_In.Pembeli.Nikproperty = SelectedDataPembeli(1)
+        Sign_In.Pembeli.NamaProperty = SelectedDataPembeli(2)
+        Sign_In.Pembeli.AlamatProperty = SelectedDataPembeli(3)
 
         Dim FormEdit1 = New EditDataPembeli()
         FormEdit1.Show()
@@ -47,7 +45,7 @@ Public Class DataPembeli
     End Sub
 
     Private Sub reloaddatatabledatabase()
-        DataGridView1.DataSource = Pembeli.GetDataPembeliDatabase()
+        DataGridView1.DataSource = Sign_In.Pembeli.GetDataPembeliDatabase()
 
     End Sub
 

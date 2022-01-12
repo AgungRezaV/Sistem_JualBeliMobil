@@ -46,7 +46,7 @@ Partial Class Form_Mobil
         Me.TBTahunPembuatan = New System.Windows.Forms.TextBox()
         Me.CBGaransi = New System.Windows.Forms.ComboBox()
         Me.BtnUpdate = New System.Windows.Forms.Button()
-        Me.BtnFormJenisMobil = New System.Windows.Forms.Button()
+        Me.BtnEditJenisMobil = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -135,6 +135,7 @@ Partial Class Form_Mobil
         Me.TBJenisMobil.Enabled = False
         Me.TBJenisMobil.Location = New System.Drawing.Point(265, 275)
         Me.TBJenisMobil.Name = "TBJenisMobil"
+        Me.TBJenisMobil.ReadOnly = True
         Me.TBJenisMobil.Size = New System.Drawing.Size(130, 20)
         Me.TBJenisMobil.TabIndex = 8
         '
@@ -265,14 +266,14 @@ Partial Class Form_Mobil
         Me.BtnUpdate.Text = "Update"
         Me.BtnUpdate.UseVisualStyleBackColor = True
         '
-        'BtnFormJenisMobil
+        'BtnEditJenisMobil
         '
-        Me.BtnFormJenisMobil.Location = New System.Drawing.Point(401, 273)
-        Me.BtnFormJenisMobil.Name = "BtnFormJenisMobil"
-        Me.BtnFormJenisMobil.Size = New System.Drawing.Size(75, 23)
-        Me.BtnFormJenisMobil.TabIndex = 26
-        Me.BtnFormJenisMobil.Text = "Edit"
-        Me.BtnFormJenisMobil.UseVisualStyleBackColor = True
+        Me.BtnEditJenisMobil.Location = New System.Drawing.Point(401, 273)
+        Me.BtnEditJenisMobil.Name = "BtnEditJenisMobil"
+        Me.BtnEditJenisMobil.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEditJenisMobil.TabIndex = 26
+        Me.BtnEditJenisMobil.Text = "Edit"
+        Me.BtnEditJenisMobil.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -325,7 +326,7 @@ Partial Class Form_Mobil
         Me.ClientSize = New System.Drawing.Size(830, 450)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.BtnFormJenisMobil)
+        Me.Controls.Add(Me.BtnEditJenisMobil)
         Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.CBGaransi)
         Me.Controls.Add(Me.TBTahunPembuatan)
@@ -384,7 +385,7 @@ Partial Class Form_Mobil
     Friend WithEvents TBTahunPembuatan As TextBox
     Friend WithEvents CBGaransi As ComboBox
     Friend WithEvents BtnUpdate As Button
-    Friend WithEvents BtnFormJenisMobil As Button
+    Friend WithEvents BtnEditJenisMobil As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MobilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisMobilToolStripMenuItem As ToolStripMenuItem
