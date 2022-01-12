@@ -1,7 +1,6 @@
 ﻿Public Class DatabaseMobil
     Public Shared selectedDatabaseMobil
     Public Shared selectedDatabaseMobilTipeMobil
-
     Public Sub New()
 
         ' This call is required by the designer.
@@ -25,8 +24,13 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Sign_In.Penjualan.CTipeMobilproperty = selectedDatabaseMobilTipeMobil
-        TambahBukuPenjualan.TextBoxMobilTerjual.Text = selectedDatabaseMobilTipeMobil
+        If selectedDatabaseMobil = 0 Then
+            MessageBox.Show("Silahkan Pilih Terlebih Dahulu Nilai yang ingin di pilih")
+        Else
+            Sign_In.Penjualan.CTipeMobilproperty = selectedDatabaseMobilTipeMobil
+            EditPenjualan.Activate()
+        End If
+
         Me.Close()
     End Sub
 

@@ -69,7 +69,7 @@ Public Class Pembeli
                                  Nik AS 'Nik',
                                  Nama AS 'Nama Pembeli',
                                  Alamat AS 'Alamat'
-                                  FROM pembeli"
+                                 FROM pembeli"
 
         sqlRead = sqlCommand.ExecuteReader
 

@@ -3,6 +3,8 @@
     Public Shared SelectedTableKoleksiNama
     Public Shared SelectedTableKoleksiTipeMobil
 
+    Dim BoolVal As Integer
+
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -18,6 +20,7 @@
     Private Sub Form_Mobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
         TBJenisMobil.Text = DatabaseJenisMobil.SelectedTableJenisMobil
+        Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text
     End Sub
 
     'Button Tambah/Update Gambar
@@ -36,8 +39,7 @@
     '-------CLOSE--------
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-
-        Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
+        'Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         Sign_In.ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         Sign_In.ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         Sign_In.ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -82,37 +84,44 @@
         SelectedTableKoleksi = selectedRow.Cells(0).Value
         SelectedTableKoleksiNama = selectedRow.Cells(1).Value
         SelectedTableKoleksiTipeMobil = selectedRow.Cells(3).Value
+        BoolVal = SelectedTableKoleksi
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi)
-        Sign_In.ClassMobil.JenisMobilProperty = SelectedKoleksi(2)
-        Sign_In.ClassMobil.dirGambarBukuProperty = SelectedKoleksi(3)
-        Sign_In.ClassMobil.TipeMobilProperty = SelectedKoleksi(4)
-        Sign_In.ClassMobil.TahunPembuatanProperty = SelectedKoleksi(5)
-        Sign_In.ClassMobil.KondisiMobilProperty = SelectedKoleksi(6)
-        Sign_In.ClassMobil.HargaMobilProperty = SelectedKoleksi(7)
-        Sign_In.ClassMobil.GaransiMobilProperty = SelectedKoleksi(8)
-        Sign_In.ClassMobil.HargaDefaultMobilProperty = SelectedKoleksi(9)
+        If BoolVal < 1 Then
+            MessageBox.Show("Tolong Pilih Terlebih Dahulu Table yang ingin di Edit")
+        Else
+            Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi)
+            Sign_In.ClassMobil.JenisMobilProperty = SelectedKoleksi(2)
+            Sign_In.ClassMobil.dirGambarBukuProperty = SelectedKoleksi(3)
+            Sign_In.ClassMobil.TipeMobilProperty = SelectedKoleksi(4)
+            Sign_In.ClassMobil.TahunPembuatanProperty = SelectedKoleksi(5)
+            Sign_In.ClassMobil.KondisiMobilProperty = SelectedKoleksi(6)
+            Sign_In.ClassMobil.HargaMobilProperty = SelectedKoleksi(7)
+            Sign_In.ClassMobil.GaransiMobilProperty = SelectedKoleksi(8)
+            Sign_In.ClassMobil.HargaDefaultMobilProperty = SelectedKoleksi(9)
 
-        TBJenisMobil.Text = Sign_In.ClassMobil.JenisMobilProperty
-        PBFoto.Load(Sign_In.ClassMobil.dirGambarBukuProperty)
-        PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
-        TBTipeMobil.Text = Sign_In.ClassMobil.TipeMobilProperty
-        TBTahunPembuatan.Text = Sign_In.ClassMobil.TahunPembuatanProperty
-        TBHarga.Text = Sign_In.ClassMobil.HargaMobilProperty
-        CBGaransi.SelectedItem() = Sign_In.ClassMobil.GaransiMobilProperty
-        TBHargaDefault.Text = Sign_In.ClassMobil.HargaDefaultMobilProperty
-        If String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Baru") = 0 Then
-            RBBaru.Checked = True
-        ElseIf String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Bekas") = 0 Then
-            RBBekas.Checked = True
+            TBJenisMobil.Text = Sign_In.ClassMobil.JenisMobilProperty
+            PBFoto.Load(Sign_In.ClassMobil.dirGambarBukuProperty)
+            PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
+            TBTipeMobil.Text = Sign_In.ClassMobil.TipeMobilProperty
+            TBTahunPembuatan.Text = Sign_In.ClassMobil.TahunPembuatanProperty
+            TBHarga.Text = Sign_In.ClassMobil.HargaMobilProperty
+            CBGaransi.SelectedItem() = Sign_In.ClassMobil.GaransiMobilProperty
+            TBHargaDefault.Text = Sign_In.ClassMobil.HargaDefaultMobilProperty
+            If String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Baru") = 0 Then
+                RBBaru.Checked = True
+            ElseIf String.Compare(Sign_In.ClassMobil.KondisiMobilProperty, "Bekas") = 0 Then
+                RBBekas.Checked = True
+            End If
+
+            Me.Activate()
+            BtnUpdate.Enabled = True
         End If
-
-        BtnUpdate.Enabled = True
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        BoolVal = 0
         Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text
         Sign_In.ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         Sign_In.ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
@@ -135,7 +144,6 @@
                                                   Sign_In.ClassMobil.GaransiMobilProperty,
                                                   Sign_In.ClassMobil.HargaDefaultMobilProperty)
 
-        BtnUpdate.Visible = False
         For Each Control As Control In Me.Controls
             If TypeOf Control Is TextBox Then
                 Control.Text = String.Empty
@@ -149,6 +157,7 @@
         End If
         CBGaransi.Text = Nothing
         PBFoto.Image = Nothing
+        BtnUpdate.Enabled = False
         ReloadDataTableDatabase()
     End Sub
 

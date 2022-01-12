@@ -7,7 +7,7 @@
 
     'Public Shared Form_Mobil As Form_Mobil
 
-    Public Shared selected_penjualan As String
+
     Public Shared selectedtablepenjualan
     Public Shared selectedtablepenjualannama As String
     Public Sub New()
@@ -53,6 +53,9 @@
         Sign_In.Penjualan.CNamaPembeliproperty = selectedKoleksi(4)
         Sign_In.Penjualan.harga_terjualproperty = selectedKoleksi(5)
         Sign_In.Penjualan.tanggal_penjualan = selectedKoleksi(6)
+
+        EditPenjualan.TBMobilTerjual.Text = Sign_In.Penjualan.CTipeMobilproperty
+        EditPenjualan.TBPembeli.Text = Sign_In.Penjualan.CNamaPembeliproperty
 
         Dim formEdit = New EditPenjualan()
         formEdit.Show()

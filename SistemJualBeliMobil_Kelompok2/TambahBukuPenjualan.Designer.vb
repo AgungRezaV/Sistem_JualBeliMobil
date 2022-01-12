@@ -84,6 +84,7 @@ Partial Class TambahBukuPenjualan
         '
         'TextBoxMobilTerjual
         '
+        Me.TextBoxMobilTerjual.Enabled = False
         Me.TextBoxMobilTerjual.Location = New System.Drawing.Point(159, 77)
         Me.TextBoxMobilTerjual.Name = "TextBoxMobilTerjual"
         Me.TextBoxMobilTerjual.Size = New System.Drawing.Size(167, 20)
@@ -91,6 +92,7 @@ Partial Class TambahBukuPenjualan
         '
         'TextBoxPembeli
         '
+        Me.TextBoxPembeli.Enabled = False
         Me.TextBoxPembeli.Location = New System.Drawing.Point(159, 114)
         Me.TextBoxPembeli.Name = "TextBoxPembeli"
         Me.TextBoxPembeli.Size = New System.Drawing.Size(167, 20)

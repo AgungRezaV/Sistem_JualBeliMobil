@@ -34,9 +34,7 @@
         If selectedTable = 0 Then
             MessageBox.Show("Gakada nilai")
         Else
-            ClassMobil.JenisMobilProperty = SelectedTableJenisMobil
             Form_Mobil.Activate()
-            MessageBox.Show(ClassMobil.JenisMobilProperty)
         End If
 
         Me.Close()

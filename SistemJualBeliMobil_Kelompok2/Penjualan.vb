@@ -61,9 +61,9 @@ Public Class Penjualan
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = " SELECT tp.id_penjualan AS 'ID',
                                     tp.id_mobil AS 'ID Mobil',
-                                    tm.id_mobil AS 'Tipe Mobil',
+                                    tm.tipe_mobil AS 'Tipe Mobil',
                                     tp.id_pembeli AS 'ID Pembeli',
-                                    pb.id_pembeli AS 'Nama Pembeli',
+                                    pb.Nama AS 'Nama Pembeli',
                                     tp.harga_terjual AS 'Harga Terjual',
                                     tp.tanggal_terjual AS 'Tanggal Penjualan'
                                     FROM tbpenjualan AS tp
