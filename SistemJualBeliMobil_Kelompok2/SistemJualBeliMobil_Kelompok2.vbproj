@@ -128,7 +128,22 @@
     <Compile Include="DataUsers.Designer.vb">
       <DependentUpon>DataUsers.vb</DependentUpon>
     </Compile>
-    <Compile Include="DataUsers.vb">
+    <Compile Include="EditJenisMobil.Designer.vb">
+      <DependentUpon>EditJenisMobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditJenisMobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusJenis.Designer.vb">
+      <DependentUpon>HapusJenis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusJenis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JenisMobil.Designer.vb">
+      <DependentUpon>JenisMobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JenisMobil.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditDataPembeli.Designer.vb">
@@ -191,6 +206,12 @@
     <Compile Include="SignUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TambahJenisMobil.Designer.vb">
+      <DependentUpon>TambahJenisMobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJenisMobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Sign_In.Designer.vb">
       <DependentUpon>Sign_In.vb</DependentUpon>
     </Compile>
@@ -221,6 +242,9 @@
     <EmbeddedResource Include="EditDataPembeli.resx">
       <DependentUpon>EditDataPembeli.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditJenisMobil.resx">
+      <DependentUpon>EditJenisMobil.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Mobil.resx">
       <DependentUpon>Form_Mobil.vb</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TambahDataPembeli.resx">
       <DependentUpon>TambahDataPembeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahJenisMobil.resx">
+      <DependentUpon>TambahJenisMobil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Testing_JenisMobil_Form.resx">
       <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>

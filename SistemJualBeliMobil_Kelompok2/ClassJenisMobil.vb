@@ -1,17 +1,18 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class ClassJenisMobil
-    Private ClassJenisMobil
+    Private Class_Jenis_Mobil As String
 
-    Public Property JenisMobilProperty As String
+    Public Property Jenis_MobilProperty() As String
         Get
-            Return ClassJenisMobil
+            Return Class_Jenis_Mobil
         End Get
         Set(ByVal value As String)
-            ClassJenisMobil = value
+            Class_Jenis_Mobil = value
         End Set
     End Property
 
+    'Variabel Declaration
     Public Shared ID
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -23,15 +24,15 @@ Public Class ClassJenisMobil
     Private password As String = " "
     Private database As String = "dbmobil"
 
-    Public Function GetDatabaseJenisMobil() As DataTable
+    Public Function GetDataKoleksiDatabase() As DataTable
         Dim result As New DataTable
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = " SELECT id_jenis_mobil AS 'ID',
-                                    jenis_mobil AS 'Jenis Mobil'
-                                    FROM jenismobil"
+        sqlCommand.CommandText = " SELECT id_jenis AS 'ID',
+                                    jenis AS 'Jenis Mobil'
+                                    FROM tb_jenismobil"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -40,7 +41,31 @@ Public Class ClassJenisMobil
         Return result
     End Function
 
-    Public Function GetDatabaseJenisMobilById(ID As Integer) As List(Of String)
+    Public Function AddDataKoleksiDatabase(jenis As String)
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "INSERT INTO tb_jenismobil(jenis) VALUE('" _
+            & jenis & "')"
+            Debug.WriteLine(sqlQuery)
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            'Perpustakaan.sqlDt.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
+    Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
@@ -48,10 +73,10 @@ Public Class ClassJenisMobil
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_mobil,
-                                    jenis_mobil
-                                    FROM jenismobil
-                                    WHERE id_jenis_mobil='" & ID & "'"
+        sqlCommand.CommandText = "SELECT id_jenis,
+                                    jenis
+                                    FROM tb_jenismobil
+                                    WHERE id_jenis='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader
         While sqlRead.Read
@@ -62,4 +87,56 @@ Public Class ClassJenisMobil
         dbConn.Close()
         Return result
     End Function
+
+    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+                                                  jenis As String)
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "UPDATE tb_jenismobil SET " &
+            "jenis='" & jenis & "' " &
+            "WHERE id_jenis='" & ID & "'"
+            Debug.WriteLine(sqlQuery)
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            'Perpustakaan.sqlDt.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+
+    End Function
+
+    Public Function DeleteDataKoleksiByIDDatabaseMobil(ID As Integer)
+        dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
+                                + "password = " + password + " ;" + "database = " + database
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM tb_jenismobil " &
+                        "WHERE id_jenis = '" & ID & "'"
+            Debug.WriteLine(sqlQuery)
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            'Perpustakaan.sqlDt.Load(sqlQuery)
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
 End Class

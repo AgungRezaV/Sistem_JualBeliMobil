@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabaseJenisMobil()
-        DataGridView1.DataSource = ClassJenisMobil.GetDatabaseJenisMobil
+        DataGridView1.DataSource = ClassJenisMobil.GetDataKoleksiDatabase
     End Sub
 
     Private Sub Testing_JenisMobil_Form_Activated(sender As Object, e As EventArgs) Handles Me.Activated
