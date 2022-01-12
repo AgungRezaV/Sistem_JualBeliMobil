@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CC0264D-432C-46D0-9416-D4492EEEE22C}</ProjectGuid>
+    <ProjectGuid>{6AA67587-EB0C-4493-91B9-38B3E5FFCC90}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SistemJualBeliMobil_Kelompok2.My.MyApplication</StartupObject>
-    <RootNamespace>SistemJualBeliMobil_Kelompok2</RootNamespace>
-    <AssemblyName>SistemJualBeliMobil_Kelompok2</AssemblyName>
+    <StartupObject>JualBeliMobil.My.MyApplication</StartupObject>
+    <RootNamespace>JualBeliMobil</RootNamespace>
+    <AssemblyName>JualBeliMobil</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SistemJualBeliMobil_Kelompok2.xml</DocumentationFile>
+    <DocumentationFile>JualBeliMobil.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SistemJualBeliMobil_Kelompok2.xml</DocumentationFile>
+    <DocumentationFile>JualBeliMobil.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -117,27 +117,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BukuPenjualan.Designer.vb">
-      <DependentUpon>BukuPenjualan.vb</DependentUpon>
-    </Compile>
     <Compile Include="BukuPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassJenisMobil.vb" />
-    <Compile Include="ClassMobil.vb" />
-    <Compile Include="DataPembeli.Designer.vb">
-      <DependentUpon>DataPembeli.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DataPembeli.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataUsers.Designer.vb">
-      <DependentUpon>DataUsers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EditJenisMobil.Designer.vb">
-      <DependentUpon>EditJenisMobil.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EditJenisMobil.vb">
+    <Compile Include="BukuPenjualan.Designer.vb">
+      <DependentUpon>BukuPenjualan.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditPenjualan.Designer.vb">
@@ -146,71 +130,16 @@
     <Compile Include="EditPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HapusJenis.Designer.vb">
-      <DependentUpon>HapusJenis.vb</DependentUpon>
-    </Compile>
-    <Compile Include="HapusJenis.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HapusPenjualan.Designer.vb">
       <DependentUpon>HapusPenjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JenisMobil.Designer.vb">
-      <DependentUpon>JenisMobil.vb</DependentUpon>
-    </Compile>
-    <Compile Include="JenisMobil.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditDataPembeli.Designer.vb">
-      <DependentUpon>EditDataPembeli.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EditDataPembeli.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Mobil.Designer.vb">
-      <DependentUpon>Form_Mobil.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Mobil.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Mobil_Hapus.Designer.vb">
-      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Mobil_Hapus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Mobil_Tambah.Designer.vb">
-      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Mobil_Tambah.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HapusDataPembeli.Designer.vb">
-      <DependentUpon>HapusDataPembeli.vb</DependentUpon>
-    </Compile>
-    <Compile Include="HapusDataPembeli.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -222,79 +151,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pembeli.vb" />
     <Compile Include="Penjualan.vb" />
-    <Compile Include="SignUp.Designer.vb">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TambahBukuPenjualan.Designer.vb">
       <DependentUpon>TambahBukuPenjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="TambahBukuPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TambahJenisMobil.Designer.vb">
-      <DependentUpon>TambahJenisMobil.vb</DependentUpon>
-    </Compile>
-    <Compile Include="TambahJenisMobil.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sign_In.Designer.vb">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Sign_In.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TambahDataPembeli.Designer.vb">
-      <DependentUpon>TambahDataPembeli.vb</DependentUpon>
-    </Compile>
-    <Compile Include="TambahDataPembeli.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testing_JenisMobil_Form.Designer.vb">
-      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Testing_JenisMobil_Form.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="users.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BukuPenjualan.resx">
       <DependentUpon>BukuPenjualan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataPembeli.resx">
-      <DependentUpon>DataPembeli.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataUsers.resx">
-      <DependentUpon>DataUsers.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditDataPembeli.resx">
-      <DependentUpon>EditDataPembeli.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditJenisMobil.resx">
-      <DependentUpon>EditJenisMobil.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditPenjualan.resx">
       <DependentUpon>EditPenjualan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Mobil.resx">
-      <DependentUpon>Form_Mobil.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Mobil_Hapus.resx">
-      <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Mobil_Tambah.resx">
-      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HapusDataPembeli.resx">
-      <DependentUpon>HapusDataPembeli.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapusPenjualan.resx">
       <DependentUpon>HapusPenjualan.vb</DependentUpon>
@@ -305,23 +175,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sign_In.resx">
-      <DependentUpon>Sign_In.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TambahBukuPenjualan.resx">
       <DependentUpon>TambahBukuPenjualan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TambahDataPembeli.resx">
-      <DependentUpon>TambahDataPembeli.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TambahJenisMobil.resx">
-      <DependentUpon>TambahJenisMobil.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testing_JenisMobil_Form.resx">
-      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

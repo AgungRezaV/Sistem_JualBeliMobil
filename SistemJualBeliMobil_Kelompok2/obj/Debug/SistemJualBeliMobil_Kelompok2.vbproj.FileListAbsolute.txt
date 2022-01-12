@@ -83,3 +83,8 @@ C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\o
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Sign_In.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.EditJenisMobil.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.TambahJenisMobil.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.BukuPenjualan.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.EditPenjualan.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Form1.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.HapusPenjualan.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.TambahBukuPenjualan.resources
