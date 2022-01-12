@@ -32,11 +32,7 @@ Partial Class Testing_JenisMobil_Form
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-<<<<<<< HEAD:SistemJualBeliMobil_Kelompok2/DataUsers.Designer.vb
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 35)
-=======
         Me.DataGridView1.Location = New System.Drawing.Point(12, 27)
->>>>>>> origin/agung:SistemJualBeliMobil_Kelompok2/Testing_JenisMobil_Form.Designer.vb
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(421, 242)
         Me.DataGridView1.TabIndex = 0

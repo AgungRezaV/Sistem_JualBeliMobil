@@ -36,12 +36,6 @@ C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBe
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.pdb
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataUsers.resources
 C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.FormUtama.resources
-<<<<<<< HEAD
-C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.EditDataPembeli.resources
-C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataPembeli.resources
-C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.TambahDataPembeli.resources
-C:\Users\User\source\repos\SistemJualBeliMobil\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.HapusDataPembeli.resources
-=======
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\bin\Debug\SistemJualBeliMobil_Kelompok2.exe.config
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\bin\Debug\SistemJualBeliMobil_Kelompok2.exe
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\bin\Debug\SistemJualBeliMobil_Kelompok2.pdb
@@ -80,4 +74,10 @@ C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\o
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Form_Mobil_Tambah.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Form_Mobil_Hapus.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Testing_JenisMobil_Form.resources
->>>>>>> origin/agung
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataPembeli.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.EditDataPembeli.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.HapusDataPembeli.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.SignUp.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.TambahDataPembeli.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataUsers.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Sign_In.resources
