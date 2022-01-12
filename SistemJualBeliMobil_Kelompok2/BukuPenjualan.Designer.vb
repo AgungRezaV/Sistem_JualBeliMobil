@@ -29,6 +29,9 @@ Partial Class BukuPenjualan
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -36,14 +39,14 @@ Partial Class BukuPenjualan
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 39)
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 74)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(602, 264)
         Me.DataGridView1.TabIndex = 3
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(305, 323)
+        Me.BtnTambah.Location = New System.Drawing.Point(325, 344)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(82, 30)
         Me.BtnTambah.TabIndex = 4
@@ -52,7 +55,7 @@ Partial Class BukuPenjualan
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(519, 322)
+        Me.BtnHapus.Location = New System.Drawing.Point(514, 344)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(95, 31)
         Me.BtnHapus.TabIndex = 5
@@ -61,7 +64,7 @@ Partial Class BukuPenjualan
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(402, 322)
+        Me.BtnEdit.Location = New System.Drawing.Point(413, 344)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(95, 31)
         Me.BtnEdit.TabIndex = 6
@@ -70,10 +73,10 @@ Partial Class BukuPenjualan
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(626, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(621, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -89,11 +92,33 @@ Partial Class BukuPenjualan
         Me.JenisMobilToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.JenisMobilToolStripMenuItem.Text = "Jenis Mobil"
         '
+        'PembeliToolStripMenuItem
+        '
+        Me.PembeliToolStripMenuItem.Name = "PembeliToolStripMenuItem"
+        Me.PembeliToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.PembeliToolStripMenuItem.Text = "Pembeli"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(249, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "BUKU PENJUALAN"
+        '
+        'BukuPenjualanToolStripMenuItem
+        '
+        Me.BukuPenjualanToolStripMenuItem.Name = "BukuPenjualanToolStripMenuItem"
+        Me.BukuPenjualanToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
+        Me.BukuPenjualanToolStripMenuItem.Text = "Buku Penjualan"
+        '
         'BukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(626, 447)
+        Me.ClientSize = New System.Drawing.Size(621, 387)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnTambah)
@@ -116,4 +141,7 @@ Partial Class BukuPenjualan
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MobilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents JenisMobilToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PembeliToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
+    Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -166,4 +166,19 @@
         Dim open_form2 = New Testing_JenisMobil_Form()
         open_form2.Show()
     End Sub
+
+    Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
+        Dim FormBukuPenjualan = New BukuPenjualan()
+        FormBukuPenjualan.Show()
+    End Sub
+
+    Private Sub JenisMobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisMobilToolStripMenuItem.Click
+        Dim FormJenisMobil = New JenisMobil()
+        FormJenisMobil.Show()
+    End Sub
+
+    Private Sub PembeliToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembeliToolStripMenuItem.Click
+        Dim FormPembeli = New DataPembeli()
+        FormPembeli.Show()
+    End Sub
 End Class

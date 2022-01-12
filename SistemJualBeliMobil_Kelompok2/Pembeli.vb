@@ -15,7 +15,7 @@ Public Class Pembeli
     Private server As String = "localhost"
     Private username As String = "root"
     Private password As String = " "
-    Private database As String = "sistemjualbelimobil"
+    Private database As String = "dbmobil"
 
     Public Property Nikproperty() As String
         Get

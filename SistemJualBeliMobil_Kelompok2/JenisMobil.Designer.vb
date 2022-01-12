@@ -108,11 +108,11 @@ Partial Class JenisMobil
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(602, 322)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.DG)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "JenisMobil"
         Me.Text = "JenisMobil"
         CType(Me.DG, System.ComponentModel.ISupportInitialize).EndInit()

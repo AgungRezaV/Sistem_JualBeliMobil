@@ -30,9 +30,9 @@ Public Class ClassJenisMobil
                                 + "password = " + password + " ;" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = " SELECT id_jenis AS 'ID',
-                                    jenis AS 'Jenis Mobil'
-                                    FROM tb_jenismobil"
+        sqlCommand.CommandText = " SELECT id_jenis_mobil AS 'ID',
+                                    jenis_mobil AS 'Jenis Mobil'
+                                    FROM jenismobil"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -47,7 +47,7 @@ Public Class ClassJenisMobil
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO tb_jenismobil(jenis) VALUE('" _
+            sqlQuery = "INSERT INTO jenismobil(jenis_mobil) VALUE('" _
             & jenis & "')"
             Debug.WriteLine(sqlQuery)
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -73,10 +73,10 @@ Public Class ClassJenisMobil
         dbConn.Open()
 
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis,
-                                    jenis
+        sqlCommand.CommandText = "SELECT id_jenis_mobil,
+                                    jenis_mobil
                                     FROM tb_jenismobil
-                                    WHERE id_jenis='" & ID & "'"
+                                    WHERE id_jenis_mobil='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader
         While sqlRead.Read
@@ -89,15 +89,15 @@ Public Class ClassJenisMobil
     End Function
 
     Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
-                                                  jenis As String)
+                                                  jenis_mobil As String)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE tb_jenismobil SET " &
-            "jenis='" & jenis & "' " &
-            "WHERE id_jenis='" & ID & "'"
+            sqlQuery = "UPDATE jenismobil SET " &
+            "jenis_mobil='" & jenis_mobil & "' " &
+            "WHERE id_jenis_mobil='" & ID & "'"
             Debug.WriteLine(sqlQuery)
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -121,8 +121,8 @@ Public Class ClassJenisMobil
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "DELETE FROM tb_jenismobil " &
-                        "WHERE id_jenis = '" & ID & "'"
+            sqlQuery = "DELETE FROM jenismobil " &
+                        "WHERE id_jenis_mobil = '" & ID & "'"
             Debug.WriteLine(sqlQuery)
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader

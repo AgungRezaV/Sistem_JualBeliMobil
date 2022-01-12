@@ -32,6 +32,8 @@ Partial Class TambahBukuPenjualan
         Me.TxtBoxHargaTerjual = New System.Windows.Forms.TextBox()
         Me.DateTimePickerJual = New System.Windows.Forms.DateTimePicker()
         Me.ButtonTambah = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblTmbhBuku
@@ -84,14 +86,14 @@ Partial Class TambahBukuPenjualan
         '
         Me.TextBoxMobilTerjual.Location = New System.Drawing.Point(159, 77)
         Me.TextBoxMobilTerjual.Name = "TextBoxMobilTerjual"
-        Me.TextBoxMobilTerjual.Size = New System.Drawing.Size(250, 20)
+        Me.TextBoxMobilTerjual.Size = New System.Drawing.Size(167, 20)
         Me.TextBoxMobilTerjual.TabIndex = 14
         '
         'TextBoxMerekMobil
         '
         Me.TextBoxMerekMobil.Location = New System.Drawing.Point(159, 114)
         Me.TextBoxMerekMobil.Name = "TextBoxMerekMobil"
-        Me.TextBoxMerekMobil.Size = New System.Drawing.Size(250, 20)
+        Me.TextBoxMerekMobil.Size = New System.Drawing.Size(167, 20)
         Me.TextBoxMerekMobil.TabIndex = 15
         '
         'TxtBoxHargaTerjual
@@ -118,11 +120,31 @@ Partial Class TambahBukuPenjualan
         Me.ButtonTambah.Text = "Tambah "
         Me.ButtonTambah.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(332, 77)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Edit"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(332, 114)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 25
+        Me.Button2.Text = "Edit"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'TambahBukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(478, 367)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonTambah)
         Me.Controls.Add(Me.DateTimePickerJual)
         Me.Controls.Add(Me.TxtBoxHargaTerjual)
@@ -149,4 +171,6 @@ Partial Class TambahBukuPenjualan
     Friend WithEvents TxtBoxHargaTerjual As TextBox
     Friend WithEvents DateTimePickerJual As DateTimePicker
     Friend WithEvents ButtonTambah As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

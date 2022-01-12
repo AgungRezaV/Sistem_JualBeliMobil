@@ -20,8 +20,8 @@
         If data_user.Count > 0 Then
 
             USERS.realUsernameProperty = data_user(1)
-            Dim formpembeli = New DataPembeli
-            formpembeli.Show()
+            Dim formpenjualan = New BukuPenjualan()
+            formpenjualan.Show()
             Me.Hide()
         Else
             MessageBox.Show("Password Anda Salah")

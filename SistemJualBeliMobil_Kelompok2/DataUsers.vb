@@ -10,8 +10,6 @@
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
-
-
     Private Sub BtnTambahUser_Click(sender As Object, e As EventArgs) Handles BtnTambahUser.Click
         Dim form_tambah = New SignUp
         SignUp.Show()
@@ -23,6 +21,5 @@
 
     Private Sub reloaddatatabledatabase()
         DataGridView1.DataSource = users.GetDataUsersFromDatabase()
-
     End Sub
 End Class

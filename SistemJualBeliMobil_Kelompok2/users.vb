@@ -16,7 +16,7 @@ Public Class users
     Private server As String = "localhost"
     Private username_db As String = "root"
     Private password_db As String = ""
-    Private database As String = "sistemjualbelimobil"
+    Private database As String = "dbmobil"
 
     Private TripleDes As New TripleDESCryptoServiceProvider
     Public Function EncrypData(ByVal plaintext As String) As String

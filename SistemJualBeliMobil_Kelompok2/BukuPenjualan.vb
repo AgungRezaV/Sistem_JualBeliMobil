@@ -2,6 +2,7 @@
 
     Public Shared Penjualan As Penjualan
 
+
     Public Shared selected_penjualan As String
     Public Shared selectedtablepenjualan
     Public Shared selectedtablepenjualannama As String
@@ -15,7 +16,11 @@
         'Users = New users
         'UpdateDataTableArrayList()
         ' Add any initialization after the InitializeComponent() call.
+        If DataPembeli.DataGridView1.RowCount < 2 Then
 
+            BtnTambah.Enabled = False
+
+        End If
     End Sub
     Private Sub BtnTambahPenjualan_Click(sender As Object, e As EventArgs)
         Dim tambah_penjualan = New TambahBukuPenjualan()
@@ -63,5 +68,20 @@
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Dim formTambah = New TambahBukuPenjualan()
         formTambah.Show()
+    End Sub
+
+    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        Dim FormMobil = New Form_Mobil()
+        FormMobil.Show()
+    End Sub
+
+    Private Sub JenisMobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisMobilToolStripMenuItem.Click
+        Dim FormJenisMobil = New JenisMobil()
+        FormJenisMobil.Show()
+    End Sub
+
+    Private Sub PembeliToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembeliToolStripMenuItem.Click
+        Dim FormPembeli = New DataPembeli()
+        FormPembeli.Show()
     End Sub
 End Class

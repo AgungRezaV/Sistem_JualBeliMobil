@@ -41,9 +41,23 @@
         Dim form_baru2 = New EditJenisMobil
         form_baru2.Show()
     End Sub
-
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Dim form_baru3 = New HapusJenis
         form_baru3.Show()
+    End Sub
+
+    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        Dim FormMobil = New Form_Mobil()
+        FormMobil.Show()
+    End Sub
+
+    Private Sub PembeliToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembeliToolStripMenuItem.Click
+        Dim FormPembeli = New DataPembeli()
+        FormPembeli.Show()
+    End Sub
+
+    Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
+        Dim FormBukuPenjualan = New BukuPenjualan()
+        FormBukuPenjualan.Show()
     End Sub
 End Class

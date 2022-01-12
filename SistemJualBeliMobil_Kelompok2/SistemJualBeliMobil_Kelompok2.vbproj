@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -125,6 +128,18 @@
     </Compile>
     <Compile Include="ClassJenisMobil.vb" />
     <Compile Include="ClassMobil.vb" />
+    <Compile Include="DatabaseMobil.Designer.vb">
+      <DependentUpon>DatabaseMobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseMobil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabasePembeli.Designer.vb">
+      <DependentUpon>DatabasePembeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasePembeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataPembeli.Designer.vb">
       <DependentUpon>DataPembeli.vb</DependentUpon>
     </Compile>
@@ -133,6 +148,9 @@
     </Compile>
     <Compile Include="DataUsers.Designer.vb">
       <DependentUpon>DataUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataUsers.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditJenisMobil.Designer.vb">
       <DependentUpon>EditJenisMobil.vb</DependentUpon>
@@ -144,9 +162,6 @@
       <DependentUpon>EditPenjualan.vb</DependentUpon>
     </Compile>
     <Compile Include="EditPenjualan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HapusJenis.Designer.vb">
@@ -172,9 +187,6 @@
     </Compile>
     <Compile Include="EditDataPembeli.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -266,6 +278,12 @@
     <EmbeddedResource Include="BukuPenjualan.resx">
       <DependentUpon>BukuPenjualan.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseMobil.resx">
+      <DependentUpon>DatabaseMobil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabasePembeli.resx">
+      <DependentUpon>DatabasePembeli.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataPembeli.resx">
       <DependentUpon>DataPembeli.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,9 +299,6 @@
     <EmbeddedResource Include="EditPenjualan.resx">
       <DependentUpon>EditPenjualan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_Mobil.resx">
       <DependentUpon>Form_Mobil.vb</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HapusPenjualan.resx">
       <DependentUpon>HapusPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JenisMobil.resx">
+      <DependentUpon>JenisMobil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -325,6 +343,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

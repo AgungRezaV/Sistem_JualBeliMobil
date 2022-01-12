@@ -30,7 +30,7 @@ Public Class Penjualan
     Private server As String = "localhost"
     Private username As String = "root"
     Private password As String = " "
-    Private database As String = "penjualan"
+    Private database As String = "dbmobil"
 
     Public Function GetDataKoleksiDatabase() As DataTable
         Dim result As New DataTable

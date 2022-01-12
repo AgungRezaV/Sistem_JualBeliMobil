@@ -58,5 +58,18 @@ Public Class DataPembeli
         reloaddatatabledatabase()
     End Sub
 
+    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        Dim FormMobil = New Form_Mobil()
+        FormMobil.Show()
+    End Sub
 
+    Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
+        Dim FormBukuPenjualan = New BukuPenjualan()
+        FormBukuPenjualan.Show()
+    End Sub
+
+    Private Sub JenisMobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisMobilToolStripMenuItem.Click
+        Dim FormJenisMobil = New JenisMobil()
+        FormJenisMobil.Show()
+    End Sub
 End Class
