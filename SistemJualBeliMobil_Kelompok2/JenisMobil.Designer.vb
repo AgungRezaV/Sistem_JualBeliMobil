@@ -37,7 +37,7 @@ Partial Class JenisMobil
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(351, 291)
+        Me.BtnTambah.Location = New System.Drawing.Point(29, 248)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 12
@@ -46,7 +46,7 @@ Partial Class JenisMobil
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(432, 291)
+        Me.BtnEdit.Location = New System.Drawing.Point(110, 248)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 11
@@ -55,7 +55,7 @@ Partial Class JenisMobil
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(513, 291)
+        Me.BtnHapus.Location = New System.Drawing.Point(191, 248)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 10
@@ -67,7 +67,7 @@ Partial Class JenisMobil
         Me.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DG.Location = New System.Drawing.Point(10, 27)
         Me.DG.Name = "DG"
-        Me.DG.Size = New System.Drawing.Size(578, 247)
+        Me.DG.Size = New System.Drawing.Size(279, 215)
         Me.DG.TabIndex = 9
         '
         'MenuStrip1
@@ -75,7 +75,7 @@ Partial Class JenisMobil
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(602, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(298, 24)
         Me.MenuStrip1.TabIndex = 13
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -107,7 +107,7 @@ Partial Class JenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(602, 322)
+        Me.ClientSize = New System.Drawing.Size(298, 274)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.BtnEdit)

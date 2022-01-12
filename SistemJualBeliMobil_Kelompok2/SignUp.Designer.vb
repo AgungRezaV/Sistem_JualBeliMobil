@@ -35,17 +35,17 @@ Partial Class SignUp
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("OCR A Extended", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(170, 21)
+        Me.Label3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(114, 13)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(162, 17)
+        Me.Label3.Size = New System.Drawing.Size(168, 22)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "CREATE ACCOUNT"
         '
         'btncreate
         '
-        Me.btncreate.Location = New System.Drawing.Point(352, 187)
+        Me.btncreate.Location = New System.Drawing.Point(296, 156)
         Me.btncreate.Name = "btncreate"
         Me.btncreate.Size = New System.Drawing.Size(75, 23)
         Me.btncreate.TabIndex = 15
@@ -54,14 +54,14 @@ Partial Class SignUp
         '
         'TextBoxpassword
         '
-        Me.TextBoxpassword.Location = New System.Drawing.Point(194, 110)
+        Me.TextBoxpassword.Location = New System.Drawing.Point(138, 95)
         Me.TextBoxpassword.Name = "TextBoxpassword"
         Me.TextBoxpassword.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxpassword.TabIndex = 14
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(194, 67)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(138, 59)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxUsername.TabIndex = 13
@@ -70,7 +70,7 @@ Partial Class SignUp
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 108)
+        Me.Label2.Location = New System.Drawing.Point(13, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 12
@@ -80,7 +80,7 @@ Partial Class SignUp
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(69, 67)
+        Me.Label1.Location = New System.Drawing.Point(13, 59)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 11
@@ -90,7 +90,7 @@ Partial Class SignUp
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(69, 145)
+        Me.Label4.Location = New System.Drawing.Point(13, 128)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(48, 20)
         Me.Label4.TabIndex = 17
@@ -98,7 +98,7 @@ Partial Class SignUp
         '
         'TextBoxEmail
         '
-        Me.TextBoxEmail.Location = New System.Drawing.Point(194, 147)
+        Me.TextBoxEmail.Location = New System.Drawing.Point(138, 130)
         Me.TextBoxEmail.Name = "TextBoxEmail"
         Me.TextBoxEmail.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxEmail.TabIndex = 18
@@ -107,7 +107,7 @@ Partial Class SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 280)
+        Me.ClientSize = New System.Drawing.Size(380, 187)
         Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)

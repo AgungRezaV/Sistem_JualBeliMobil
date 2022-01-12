@@ -1,4 +1,4 @@
-﻿Public Class Testing_JenisMobil_Form
+﻿Public Class DatabaseJenisMobil
     Public Shared SelectedTableKoleksiJenisMobil
     Public Shared selectedTableKoleksi
     Public Shared ClassJenisMobil As ClassJenisMobil
@@ -28,7 +28,7 @@
         SelectedTableKoleksiJenisMobil = selectedRow.Cells(1).Value
     End Sub
 
-    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+    Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
         Form_Mobil.ClassMobil.JenisMobilProperty = SelectedTableKoleksiJenisMobil
         Form_Mobil.TBJenisMobil.Text = SelectedTableKoleksiJenisMobil
         Me.Close()

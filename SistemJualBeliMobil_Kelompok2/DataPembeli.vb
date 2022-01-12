@@ -41,8 +41,6 @@ Public Class DataPembeli
         FormEdit1.Show()
     End Sub
 
-
-
     Private Sub ButtonHapus_Click(sender As Object, e As EventArgs) Handles ButtonHapus.Click
         Dim formhapus1 = New HapusDataPembeli()
         formhapus1.Show()
@@ -61,15 +59,18 @@ Public Class DataPembeli
     Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
         Dim FormMobil = New Form_Mobil()
         FormMobil.Show()
+        Me.Close()
     End Sub
 
     Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
         Dim FormBukuPenjualan = New BukuPenjualan()
         FormBukuPenjualan.Show()
+        Me.Close()
     End Sub
 
     Private Sub JenisMobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisMobilToolStripMenuItem.Click
         Dim FormJenisMobil = New JenisMobil()
         FormJenisMobil.Show()
+        Me.Close()
     End Sub
 End Class

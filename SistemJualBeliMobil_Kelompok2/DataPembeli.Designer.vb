@@ -38,7 +38,7 @@ Partial Class DataPembeli
         '
         'ButtonTambahData
         '
-        Me.ButtonTambahData.Location = New System.Drawing.Point(25, 245)
+        Me.ButtonTambahData.Location = New System.Drawing.Point(102, 245)
         Me.ButtonTambahData.Name = "ButtonTambahData"
         Me.ButtonTambahData.Size = New System.Drawing.Size(112, 23)
         Me.ButtonTambahData.TabIndex = 37
@@ -48,10 +48,10 @@ Partial Class DataPembeli
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(20, 28)
+        Me.Label4.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(138, 27)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(228, 28)
+        Me.Label4.Size = New System.Drawing.Size(255, 29)
         Me.Label4.TabIndex = 36
         Me.Label4.Text = "Tambah Data Pembeli"
         '
@@ -65,7 +65,7 @@ Partial Class DataPembeli
         '
         'ButtonEdit
         '
-        Me.ButtonEdit.Location = New System.Drawing.Point(143, 245)
+        Me.ButtonEdit.Location = New System.Drawing.Point(220, 245)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(112, 23)
         Me.ButtonEdit.TabIndex = 40
@@ -74,7 +74,7 @@ Partial Class DataPembeli
         '
         'ButtonHapus
         '
-        Me.ButtonHapus.Location = New System.Drawing.Point(261, 245)
+        Me.ButtonHapus.Location = New System.Drawing.Point(338, 245)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(112, 23)
         Me.ButtonHapus.TabIndex = 41
@@ -118,7 +118,7 @@ Partial Class DataPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(550, 303)
+        Me.ClientSize = New System.Drawing.Size(550, 274)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonEdit)

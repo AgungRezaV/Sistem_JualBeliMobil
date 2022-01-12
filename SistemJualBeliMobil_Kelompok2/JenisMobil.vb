@@ -49,15 +49,18 @@
     Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
         Dim FormMobil = New Form_Mobil()
         FormMobil.Show()
+        Me.Close()
     End Sub
 
     Private Sub PembeliToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembeliToolStripMenuItem.Click
         Dim FormPembeli = New DataPembeli()
         FormPembeli.Show()
+        Me.Close()
     End Sub
 
     Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
         Dim FormBukuPenjualan = New BukuPenjualan()
         FormBukuPenjualan.Show()
+        Me.Close()
     End Sub
 End Class

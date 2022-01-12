@@ -16,11 +16,7 @@
         'Users = New users
         'UpdateDataTableArrayList()
         ' Add any initialization after the InitializeComponent() call.
-        If DataPembeli.DataGridView1.RowCount < 2 Then
 
-            BtnTambah.Enabled = False
-
-        End If
     End Sub
     Private Sub BtnTambahPenjualan_Click(sender As Object, e As EventArgs)
         Dim tambah_penjualan = New TambahBukuPenjualan()
@@ -66,8 +62,13 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        Dim formTambah = New TambahBukuPenjualan()
-        formTambah.Show()
+        If DataPembeli.DataGridView1.RowCount < 2 Then
+            MessageBox.Show("Tolong Input Data Pembeli Terlebih Dahulu")
+        Else
+            Dim formTambah = New TambahBukuPenjualan()
+            formTambah.Show()
+        End If
+
     End Sub
 
     Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click

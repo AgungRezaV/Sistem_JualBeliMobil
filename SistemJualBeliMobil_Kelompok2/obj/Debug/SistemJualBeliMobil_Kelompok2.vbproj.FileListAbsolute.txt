@@ -73,7 +73,6 @@ C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\o
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.pdb
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Form_Mobil_Tambah.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Form_Mobil_Hapus.resources
-C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.Testing_JenisMobil_Form.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DataPembeli.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.EditDataPembeli.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.HapusDataPembeli.resources
@@ -90,3 +89,4 @@ C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\o
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.JenisMobil.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabaseMobil.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabasePembeli.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabaseJenisMobil.resources

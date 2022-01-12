@@ -1,7 +1,7 @@
 ﻿Public Class Form_Mobil
     Public Shared ClassMobil As ClassMobil
     Public Shared ClassJenisMobil As ClassJenisMobil
-    Public Shared Testing_JenisMobil As Testing_JenisMobil_Form
+    Public Shared Testing_JenisMobil As DatabaseJenisMobil
     Public Shared SelectedTableKoleksi
     Public Shared SelectedTableKoleksiNama
     Public Shared SelectedTableKoleksiTipeMobil
@@ -9,11 +9,11 @@
     Public Sub New()
         ClassMobil = New ClassMobil()
         ClassJenisMobil = New ClassJenisMobil()
-        Testing_JenisMobil = New Testing_JenisMobil_Form()
+        Testing_JenisMobil = New DatabaseJenisMobil()
         ' This call is required by the designer.
         InitializeComponent()
         'ReloadDataTableDatabase()
-        BtnUpdate.Visible = False
+        BtnUpdate.Enabled = False
         ' Add any initialization after the InitializeComponent() call.  
     End Sub
 
@@ -54,7 +54,7 @@
             ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        ClassMobil.AddDataKoleksiDatabaseMobil(Testing_JenisMobil_Form.selectedTableKoleksi,
+        ClassMobil.AddDataKoleksiDatabaseMobil(DatabaseJenisMobil.selectedTableKoleksi,
                                                ClassMobil.dirGambarBukuProperty,
                                                ClassMobil.TipeMobilProperty,
                                                ClassMobil.TahunPembuatanProperty,
@@ -83,7 +83,7 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridView1.Rows(index)
 
-        selectedTableKoleksi = selectedRow.Cells(0).Value
+        SelectedTableKoleksi = selectedRow.Cells(0).Value
         SelectedTableKoleksiNama = selectedRow.Cells(1).Value
         SelectedTableKoleksiTipeMobil = selectedRow.Cells(3).Value
     End Sub
@@ -113,12 +113,11 @@
             RBBekas.Checked = True
         End If
 
-        BtnUpdate.Visible = True
-
+        BtnUpdate.Enabled = True
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        ClassMobil.JenisMobilProperty = TBJenisMobil.Text()
+        ClassMobil.JenisMobilProperty = TBJenisMobil.Text
         ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -131,7 +130,7 @@
         End If
 
         ClassMobil.UpdateDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi,
-                                                Testing_JenisMobil_Form.selectedTableKoleksi,
+                                                DatabaseJenisMobil.selectedTableKoleksi,
                                                   ClassMobil.dirGambarBukuProperty,
                                                   ClassMobil.TipeMobilProperty,
                                                   ClassMobil.TahunPembuatanProperty,
@@ -163,7 +162,7 @@
     End Sub
 
     Private Sub BtnFormJenisMobil_Click(sender As Object, e As EventArgs) Handles BtnFormJenisMobil.Click
-        Dim open_form2 = New Testing_JenisMobil_Form()
+        Dim open_form2 = New DatabaseJenisMobil()
         open_form2.Show()
     End Sub
 

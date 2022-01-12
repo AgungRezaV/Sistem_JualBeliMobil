@@ -188,12 +188,6 @@
     <Compile Include="EditDataPembeli.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_Mobil.Designer.vb">
       <DependentUpon>Form_Mobil.vb</DependentUpon>
     </Compile>
@@ -266,10 +260,10 @@
     <Compile Include="TambahDataPembeli.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Testing_JenisMobil_Form.Designer.vb">
-      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
+    <Compile Include="DatabaseJenisMobil.Designer.vb">
+      <DependentUpon>DatabaseJenisMobil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Testing_JenisMobil_Form.vb">
+    <Compile Include="DatabaseJenisMobil.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="users.vb" />
@@ -338,8 +332,8 @@
     <EmbeddedResource Include="TambahJenisMobil.resx">
       <DependentUpon>TambahJenisMobil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Testing_JenisMobil_Form.resx">
-      <DependentUpon>Testing_JenisMobil_Form.vb</DependentUpon>
+    <EmbeddedResource Include="DatabaseJenisMobil.resx">
+      <DependentUpon>DatabaseJenisMobil.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +349,15 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11zon_cropped.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11zon_cropped-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_SistemJualBeliMobil_VB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
