@@ -8,9 +8,9 @@
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-        'ReloadDataTableDatabase()
-        BtnUpdate.Enabled = False
+
         ' Add any initialization after the InitializeComponent() call
+        BtnUpdate.Enabled = False
     End Sub
 
     Private Sub ReloadDataTableDatabase()
@@ -33,8 +33,8 @@
 
         PBFoto.Load(picKoleksiDir)
         PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
-        Sign_In.ClassMobil.dirGambarBukuProperty = picKoleksiDir.ToString()
-        Sign_In.ClassMobil.dirGambarBukuProperty = Sign_In.ClassMobil.dirGambarBukuProperty.Replace("\", "/")
+        Sign_In.ClassMobil.dirGambarMobilProperty = picKoleksiDir.ToString()
+        Sign_In.ClassMobil.dirGambarMobilProperty = Sign_In.ClassMobil.dirGambarMobilProperty.Replace("\", "/")
     End Sub
     '-------CLOSE--------
 
@@ -51,9 +51,9 @@
             Sign_In.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Sign_In.ClassMobil.AddDataKoleksiDatabaseMobil(
+        Sign_In.ClassMobil.AddDataDatabaseMobil(
                                                DatabaseJenisMobil.selectedTable,
-                                               Sign_In.ClassMobil.dirGambarBukuProperty,
+                                               Sign_In.ClassMobil.dirGambarMobilProperty,
                                                Sign_In.ClassMobil.TipeMobilProperty,
                                                Sign_In.ClassMobil.TahunPembuatanProperty,
                                                Sign_In.ClassMobil.KondisiMobilProperty,
@@ -91,9 +91,9 @@
         If BoolVal < 1 Then
             MessageBox.Show("Tolong Pilih Terlebih Dahulu Table yang ingin di Edit")
         Else
-            Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi)
+            Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataMobilByIDDatabaseMobil(SelectedTableKoleksi)
             Sign_In.ClassMobil.JenisMobilProperty = SelectedKoleksi(2)
-            Sign_In.ClassMobil.dirGambarBukuProperty = SelectedKoleksi(3)
+            Sign_In.ClassMobil.dirGambarMobilProperty = SelectedKoleksi(3)
             Sign_In.ClassMobil.TipeMobilProperty = SelectedKoleksi(4)
             Sign_In.ClassMobil.TahunPembuatanProperty = SelectedKoleksi(5)
             Sign_In.ClassMobil.KondisiMobilProperty = SelectedKoleksi(6)
@@ -102,7 +102,7 @@
             Sign_In.ClassMobil.HargaDefaultMobilProperty = SelectedKoleksi(9)
 
             TBJenisMobil.Text = Sign_In.ClassMobil.JenisMobilProperty
-            PBFoto.Load(Sign_In.ClassMobil.dirGambarBukuProperty)
+            PBFoto.Load(Sign_In.ClassMobil.dirGambarMobilProperty)
             PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
             TBTipeMobil.Text = Sign_In.ClassMobil.TipeMobilProperty
             TBTahunPembuatan.Text = Sign_In.ClassMobil.TahunPembuatanProperty
@@ -122,7 +122,7 @@
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         BoolVal = 0
-        Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text
+        Sign_In.ClassMobil.JenisMobilProperty = TBJenisMobil.Text.ToString()
         Sign_In.ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()
         Sign_In.ClassMobil.TahunPembuatanProperty = Integer.Parse(TBTahunPembuatan.Text)
         Sign_In.ClassMobil.HargaMobilProperty = Integer.Parse(TBHarga.Text)
@@ -134,9 +134,9 @@
             Sign_In.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Sign_In.ClassMobil.UpdateDataKoleksiByIDDatabaseMobil(SelectedTableKoleksi,
+        Sign_In.ClassMobil.UpdateDataMobilByIDDatabaseMobil(SelectedTableKoleksi,
                                                   DatabaseJenisMobil.selectedTable,
-                                                  Sign_In.ClassMobil.dirGambarBukuProperty,
+                                                  Sign_In.ClassMobil.dirGambarMobilProperty,
                                                   Sign_In.ClassMobil.TipeMobilProperty,
                                                   Sign_In.ClassMobil.TahunPembuatanProperty,
                                                   Sign_In.ClassMobil.KondisiMobilProperty,
@@ -172,8 +172,6 @@
     End Sub
 
     Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
-        Dim FormBukuPenjualan = New BukuPenjualan()
-        FormBukuPenjualan.Show()
         Me.Close()
     End Sub
 
@@ -187,5 +185,9 @@
         Dim FormPembeli = New DataPembeli()
         FormPembeli.Show()
         Me.Close()
+    End Sub
+
+    Private Sub MobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MobilToolStripMenuItem.Click
+        MessageBox.Show("Form Sudah Terbuka")
     End Sub
 End Class

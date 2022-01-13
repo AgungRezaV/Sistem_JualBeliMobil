@@ -35,7 +35,7 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim SelectedKoleksi As List(Of String) = ClassJenisMobil.GetDataKoleksiByIDDatabase(selectedTableKoleksi)
+        Dim SelectedKoleksi As List(Of String) = ClassJenisMobil.GetDataJenisMobilByIDDatabase(selectedTableKoleksi)
         ClassJenisMobil.Jenis_MobilProperty = SelectedKoleksi(1)
 
         Dim form_baru2 = New EditJenisMobil
@@ -59,8 +59,10 @@
     End Sub
 
     Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
-        Dim FormBukuPenjualan = New BukuPenjualan()
-        FormBukuPenjualan.Show()
         Me.Close()
+    End Sub
+
+    Private Sub JenisMobilToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisMobilToolStripMenuItem.Click
+        MessageBox.Show("Form Sudah Terbuka")
     End Sub
 End Class

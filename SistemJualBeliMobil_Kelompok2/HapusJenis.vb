@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-        JenisMobil.ClassJenisMobil.DeleteDataKoleksiByIDDatabaseMobil(JenisMobil.selectedTableKoleksi)
+        JenisMobil.ClassJenisMobil.DeleteDataJenisMobilByID(JenisMobil.selectedTableKoleksi)
         Me.Close()
     End Sub
 

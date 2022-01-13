@@ -305,6 +305,9 @@
     <EmbeddedResource Include="HapusDataPembeli.resx">
       <DependentUpon>HapusDataPembeli.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HapusJenis.resx">
+      <DependentUpon>HapusJenis.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HapusPenjualan.resx">
       <DependentUpon>HapusPenjualan.vb</DependentUpon>
     </EmbeddedResource>

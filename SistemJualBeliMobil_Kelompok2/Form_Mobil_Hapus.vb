@@ -10,7 +10,7 @@
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         'Perpus.Koleksi.RemoveKoleksi(Perpus.ListBoxKoleksi.SelectedItem)
-        Sign_In.ClassMobil.DeleteDataKoleksiByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
+        Sign_In.ClassMobil.DeleteDataMobilByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
         For Each Control As Control In Form_Mobil.Controls
             If TypeOf Control Is TextBox Then
                 Control.Text = String.Empty

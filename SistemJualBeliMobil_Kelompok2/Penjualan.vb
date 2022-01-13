@@ -53,7 +53,7 @@ Public Class Penjualan
     Private password As String = " "
     Private database As String = "dbmobil"
 
-    Public Function GetDataKoleksiDatabase() As DataTable
+    Public Function GetDataPenjualanDatabase() As DataTable
         Dim result As New DataTable
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                     + "password = " + password + " ;" + "database = " + database
@@ -77,7 +77,7 @@ Public Class Penjualan
         Return result
     End Function
 
-    Public Function AddDataKoleksiDatabase(id_mobil As Integer,
+    Public Function AddDataPenjualanDatabase(id_mobil As Integer,
                                            id_pembeli As Integer,
                                            harga_terjual As Integer,
                                            tanggal_terjual As Date)
@@ -107,7 +107,7 @@ Public Class Penjualan
         End Try
     End Function
 
-    Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
+    Public Function GetDataPenjualanByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
@@ -142,7 +142,7 @@ Public Class Penjualan
         Return result
     End Function
 
-    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+    Public Function UpdateDataPenjualanByIDDatabase(ID As Integer,
                                                   id_mobil As Integer,
                                                   id_pembeli As Integer,
                                                   harga_terjual As Integer,
@@ -174,7 +174,7 @@ Public Class Penjualan
 
     End Function
 
-    Public Function DeleteDataKoleksiByIDDatabase(ID As Integer)
+    Public Function DeleteDataPenjualanByIDDatabase(ID As Integer)
         dbConn.ConnectionString = "server=" + server + ";" + "user id=" + username + ";" _
                 + "password=" + password + ";" + "database =" + database
 

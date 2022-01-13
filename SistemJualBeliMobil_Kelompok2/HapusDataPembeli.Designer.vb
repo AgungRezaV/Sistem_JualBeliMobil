@@ -30,7 +30,7 @@ Partial Class HapusDataPembeli
         'btnhapus
         '
         Me.btnhapus.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhapus.Location = New System.Drawing.Point(143, 174)
+        Me.btnhapus.Location = New System.Drawing.Point(147, 140)
         Me.btnhapus.Margin = New System.Windows.Forms.Padding(2)
         Me.btnhapus.Name = "btnhapus"
         Me.btnhapus.Size = New System.Drawing.Size(88, 32)
@@ -41,32 +41,32 @@ Partial Class HapusDataPembeli
         'Labelnama
         '
         Me.Labelnama.AutoSize = True
-        Me.Labelnama.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Labelnama.Font = New System.Drawing.Font("Cooper Black", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Labelnama.ForeColor = System.Drawing.Color.Red
-        Me.Labelnama.Location = New System.Drawing.Point(86, 115)
+        Me.Labelnama.BackColor = System.Drawing.Color.Transparent
+        Me.Labelnama.Font = New System.Drawing.Font("Montserrat", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Labelnama.ForeColor = System.Drawing.Color.Black
+        Me.Labelnama.Location = New System.Drawing.Point(119, 85)
         Me.Labelnama.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Labelnama.Name = "Labelnama"
-        Me.Labelnama.Size = New System.Drawing.Size(208, 31)
+        Me.Labelnama.Size = New System.Drawing.Size(175, 29)
         Me.Labelnama.TabIndex = 4
         Me.Labelnama.Text = "Nama Pembeli"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("NSimSun", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 56)
+        Me.Label1.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(41, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(383, 15)
+        Me.Label1.Size = New System.Drawing.Size(331, 52)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Apakah Anda Ingin Menghapus Koleksi Berikut ???"
+        Me.Label1.Text = "Apakah Anda Ingin Menghapus " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nama Pembeli Berikut ???"
         '
         'HapusDataPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(415, 270)
+        Me.ClientSize = New System.Drawing.Size(415, 184)
         Me.Controls.Add(Me.btnhapus)
         Me.Controls.Add(Me.Labelnama)
         Me.Controls.Add(Me.Label1)

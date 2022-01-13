@@ -1,10 +1,13 @@
 ﻿Public Class DatabaseMobil
     Public Shared selectedDatabaseMobil
     Public Shared selectedDatabaseMobilTipeMobil
+    Public Shared EditPenjualan As EditPenjualan
+
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
+        EditPenjualan = New EditPenjualan()
 
         ' Add any initialization after the InitializeComponent() call.
         ReloadDataTableDatabase()
@@ -28,6 +31,7 @@
             MessageBox.Show("Silahkan Pilih Terlebih Dahulu Nilai yang ingin di pilih")
         Else
             Sign_In.Penjualan.CTipeMobilproperty = selectedDatabaseMobilTipeMobil
+            MessageBox.Show(selectedDatabaseMobilTipeMobil)
             EditPenjualan.Activate()
         End If
 

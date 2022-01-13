@@ -34,6 +34,7 @@ Partial Class BukuPenjualan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnRefresh = New System.Windows.Forms.Button()
+        Me.AdminDataAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,12 +45,12 @@ Partial Class BukuPenjualan
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(7, 74)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(602, 264)
+        Me.DataGridView1.Size = New System.Drawing.Size(747, 264)
         Me.DataGridView1.TabIndex = 3
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(325, 344)
+        Me.BtnTambah.Location = New System.Drawing.Point(470, 344)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(82, 30)
         Me.BtnTambah.TabIndex = 4
@@ -58,7 +59,7 @@ Partial Class BukuPenjualan
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(514, 344)
+        Me.BtnHapus.Location = New System.Drawing.Point(659, 344)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(95, 31)
         Me.BtnHapus.TabIndex = 5
@@ -67,7 +68,7 @@ Partial Class BukuPenjualan
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(413, 344)
+        Me.BtnEdit.Location = New System.Drawing.Point(558, 344)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(95, 31)
         Me.BtnEdit.TabIndex = 6
@@ -76,10 +77,10 @@ Partial Class BukuPenjualan
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem, Me.AdminDataAccountToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(617, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(761, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -111,7 +112,7 @@ Partial Class BukuPenjualan
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(186, 33)
+        Me.Label1.Location = New System.Drawing.Point(268, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(221, 29)
         Me.Label1.TabIndex = 8
@@ -122,7 +123,7 @@ Partial Class BukuPenjualan
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
-        Me.PictureBox1.Location = New System.Drawing.Point(561, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(710, 27)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -138,11 +139,17 @@ Partial Class BukuPenjualan
         Me.BtnRefresh.Text = "Refresh"
         Me.BtnRefresh.UseVisualStyleBackColor = True
         '
+        'AdminDataAccountToolStripMenuItem
+        '
+        Me.AdminDataAccountToolStripMenuItem.Name = "AdminDataAccountToolStripMenuItem"
+        Me.AdminDataAccountToolStripMenuItem.Size = New System.Drawing.Size(130, 20)
+        Me.AdminDataAccountToolStripMenuItem.Text = "Admin Data Account"
+        '
         'BukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(617, 381)
+        Me.ClientSize = New System.Drawing.Size(761, 381)
         Me.Controls.Add(Me.BtnRefresh)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
@@ -174,4 +181,5 @@ Partial Class BukuPenjualan
     Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BtnRefresh As Button
+    Friend WithEvents AdminDataAccountToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -53,6 +53,7 @@ Partial Class Form_Mobil
         Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBKondisiMobil.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -277,7 +278,7 @@ Partial Class Form_Mobil
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(830, 24)
@@ -317,6 +318,12 @@ Partial Class Form_Mobil
         Me.Label8.Size = New System.Drawing.Size(130, 29)
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "Input Data"
+        '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.UsersToolStripMenuItem.Text = "Users"
         '
         'Form_Mobil
         '
@@ -392,4 +399,5 @@ Partial Class Form_Mobil
     Friend WithEvents PembeliToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label8 As Label
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
 End Class

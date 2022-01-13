@@ -41,7 +41,7 @@ Public Class ClassJenisMobil
         Return result
     End Function
 
-    Public Function AddDataKoleksiDatabase(jenis As String)
+    Public Function AddDataDatabaseJenisMobil(jenis As String)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
@@ -65,7 +65,7 @@ Public Class ClassJenisMobil
         End Try
     End Function
 
-    Public Function GetDataKoleksiByIDDatabase(ID As Integer) As List(Of String)
+    Public Function GetDataJenisMobilByIDDatabase(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
@@ -88,7 +88,7 @@ Public Class ClassJenisMobil
         Return result
     End Function
 
-    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+    Public Function UpdateDataJenisMobilByIDDatabase(ID As Integer,
                                                   jenis_mobil As String)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
@@ -115,7 +115,7 @@ Public Class ClassJenisMobil
 
     End Function
 
-    Public Function DeleteDataKoleksiByIDDatabaseMobil(ID As Integer)
+    Public Function DeleteDataJenisMobilByID(ID As Integer)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try

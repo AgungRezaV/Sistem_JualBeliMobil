@@ -12,6 +12,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
+        TextBoxpassword.PasswordChar = "*"
 
         ' Add any initialization after the InitializeComponent() call.
         USERS = New users
@@ -40,14 +41,8 @@
         End If
     End Sub
 
-
     Private Sub Buttonsignup_Click(sender As Object, e As EventArgs) Handles Buttonsignup.Click
         Dim signup = New SignUp
         signup.Show()
-    End Sub
-
-    Private Sub BtnDataUser_Click(sender As Object, e As EventArgs) Handles BtnDataUser.Click
-        Dim DataUser = New DataUsers
-        DataUser.Show()
     End Sub
 End Class

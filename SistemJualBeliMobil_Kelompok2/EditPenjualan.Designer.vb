@@ -96,6 +96,7 @@ Partial Class EditPenjualan
         '
         'TBPembeli
         '
+        Me.TBPembeli.Enabled = False
         Me.TBPembeli.Location = New System.Drawing.Point(118, 59)
         Me.TBPembeli.Name = "TBPembeli"
         Me.TBPembeli.Size = New System.Drawing.Size(185, 20)
@@ -103,6 +104,7 @@ Partial Class EditPenjualan
         '
         'TBMobilTerjual
         '
+        Me.TBMobilTerjual.Enabled = False
         Me.TBMobilTerjual.Location = New System.Drawing.Point(118, 21)
         Me.TBMobilTerjual.Name = "TBMobilTerjual"
         Me.TBMobilTerjual.Size = New System.Drawing.Size(185, 20)

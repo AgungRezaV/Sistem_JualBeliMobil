@@ -5,9 +5,9 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        Me.Activate()
 
-
+        TBMobilTerjual.Text = Sign_In.Penjualan.CTipeMobilproperty
+        TBPembeli.Text = Sign_In.Penjualan.CNamaPembeliproperty
         Txtboxhargaterjual.Text = Sign_In.Penjualan.harga_terjualproperty
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.CustomFormat = "yyyy/MM/dd"
@@ -20,7 +20,7 @@
         Sign_In.Penjualan.CNamaPembeliproperty = TBPembeli.Text.ToString()
         Sign_In.Penjualan.harga_terjualproperty = Txtboxhargaterjual.Text.ToString()
         Sign_In.Penjualan.tanggal_penjualan = DateTimePicker1.Value.ToString("yyyy/MM/dd")
-        Sign_In.Penjualan.UpdateDataKoleksiByIDDatabase(BukuPenjualan.selectedtablepenjualan,
+        Sign_In.Penjualan.UpdateDataPenjualanByIDDatabase(BukuPenjualan.selectedtablepenjualan,
                                                         DatabaseMobil.selectedDatabaseMobil,
                                                         DatabasePembeli.selectedDatabasePembeli,
                                                         Sign_In.Penjualan.harga_terjualproperty,

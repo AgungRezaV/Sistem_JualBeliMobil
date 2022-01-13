@@ -49,11 +49,11 @@ Partial Class DataPembeli
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(138, 27)
+        Me.Label4.Location = New System.Drawing.Point(215, 27)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(255, 29)
+        Me.Label4.Size = New System.Drawing.Size(102, 29)
         Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Tambah Data Pembeli"
+        Me.Label4.Text = "Pembeli"
         '
         'DataGridView1
         '

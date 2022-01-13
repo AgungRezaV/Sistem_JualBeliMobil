@@ -11,7 +11,7 @@ Public Class ClassMobil
     Private ClassHargaDefault As Integer
 
     'Getter and Setter untuk Form Mobil
-    Public Property dirGambarBukuProperty() As String
+    Public Property dirGambarMobilProperty() As String
         Get
             Return ClassGambar
         End Get
@@ -124,7 +124,7 @@ Public Class ClassMobil
     End Function
     '-----------CLOSE-----------
 
-    Public Function AddDataKoleksiDatabaseMobil(id_jenis_mobil As Integer,
+    Public Function AddDataDatabaseMobil(id_jenis_mobil As Integer,
                                                 dir_gambar As String,
                                                 tipe_mobil As String,
                                                 tahun_pembuatan As String,
@@ -163,7 +163,7 @@ Public Class ClassMobil
     End Function
 
     'Delete Button di Database
-    Public Function DeleteDataKoleksiByIDDatabaseMobil(ID As Integer)
+    Public Function DeleteDataMobilByIDDatabaseMobil(ID As Integer)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
         Try
@@ -193,7 +193,7 @@ Public Class ClassMobil
     '--------CLOSE----------
 
     'EDIT BUTTON DATABASE MOBIL
-    Public Function GetDataKoleksiByIDDatabaseMobil(ID As Integer) As List(Of String)
+    Public Function GetDataMobilByIDDatabaseMobil(ID As Integer) As List(Of String)
         Dim result As New List(Of String)
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
@@ -231,7 +231,7 @@ Public Class ClassMobil
         Return result
     End Function
 
-    Public Function UpdateDataKoleksiByIDDatabaseMobil(ID As Integer,
+    Public Function UpdateDataMobilByIDDatabaseMobil(ID As Integer,
                                                        id_jenis_mobil As Integer,
                                                        dir_gambar As String,
                                                        tipe_mobil As String,

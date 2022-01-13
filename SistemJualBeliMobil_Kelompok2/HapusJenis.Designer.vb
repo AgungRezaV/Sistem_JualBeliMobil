@@ -29,7 +29,7 @@ Partial Class HapusJenis
         '
         'btnHapus
         '
-        Me.btnHapus.Location = New System.Drawing.Point(158, 140)
+        Me.btnHapus.Location = New System.Drawing.Point(166, 107)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 5
@@ -44,7 +44,7 @@ Partial Class HapusJenis
         Me.LbNama.AutoSize = True
         Me.LbNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbNama.ForeColor = System.Drawing.Color.Red
-        Me.LbNama.Location = New System.Drawing.Point(126, 88)
+        Me.LbNama.Location = New System.Drawing.Point(162, 50)
         Me.LbNama.Name = "LbNama"
         Me.LbNama.Size = New System.Drawing.Size(149, 20)
         Me.LbNama.TabIndex = 4
@@ -54,10 +54,10 @@ Partial Class HapusJenis
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(27, 32)
+        Me.Label1.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(355, 24)
+        Me.Label1.Size = New System.Drawing.Size(425, 26)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Apakah ingin menghapus jenis mobil ini?"
         '
@@ -65,7 +65,7 @@ Partial Class HapusJenis
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(400, 184)
+        Me.ClientSize = New System.Drawing.Size(443, 140)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.LbNama)
         Me.Controls.Add(Me.Label1)

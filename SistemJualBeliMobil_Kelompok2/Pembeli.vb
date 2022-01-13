@@ -143,7 +143,7 @@ Public Class Pembeli
         Return result
     End Function
 
-    Public Function UpdateDataKoleksiByIDDatabase(ID As Integer,
+    Public Function UpdateDataPembeliByIDDatabase(ID As Integer,
                                                   Nik As String,
                                                   Nama As String,
                                                   Alamat As String)
@@ -174,7 +174,7 @@ Public Class Pembeli
 
     End Function
 
-    Public Function DeleteDataKoleksiByIDDatabase(ID As Integer)
+    Public Function DeleteDataPembeliByIDDatabase(ID As Integer)
 
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database

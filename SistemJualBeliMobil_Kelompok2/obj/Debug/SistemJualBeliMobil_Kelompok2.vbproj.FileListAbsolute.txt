@@ -90,3 +90,4 @@ C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\o
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabaseMobil.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabasePembeli.resources
 C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.DatabaseJenisMobil.resources
+C:\Users\Agung\source\repos\Sistem_JualBeliMobil\SistemJualBeliMobil_Kelompok2\obj\Debug\SistemJualBeliMobil_Kelompok2.HapusJenis.resources

@@ -12,7 +12,7 @@
         Sign_In.Penjualan.CNamaPembeliproperty = TextBoxPembeli.Text.ToString()
         Sign_In.Penjualan.harga_terjualproperty = TxtBoxHargaTerjual.Text.ToString()
         Sign_In.Penjualan.tanggal_penjualan = DateTimePickerJual.Value.ToString("yyyy/MM/dd")
-        Sign_In.Penjualan.AddDataKoleksiDatabase(DatabaseMobil.selectedDatabaseMobil,
+        Sign_In.Penjualan.AddDataPenjualanDatabase(DatabaseMobil.selectedDatabaseMobil,
                                                  DatabasePembeli.selectedDatabasePembeli,
                                                  Sign_In.Penjualan.harga_terjualproperty,
                                                  Sign_In.Penjualan.tanggal_penjualan)

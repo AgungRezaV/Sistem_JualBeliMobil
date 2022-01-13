@@ -16,8 +16,8 @@ Public Class Form_Mobil_Tambah
 
         PBFoto.Load(picKoleksiDir)
         PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
-        Sign_In.ClassMobil.dirGambarBukuProperty = picKoleksiDir.ToString()
-        Sign_In.ClassMobil.dirGambarBukuProperty = Sign_In.ClassMobil.dirGambarBukuProperty.Replace("\", "/")
+        Sign_In.ClassMobil.dirGambarMobilProperty = picKoleksiDir.ToString()
+        Sign_In.ClassMobil.dirGambarMobilProperty = Sign_In.ClassMobil.dirGambarMobilProperty.Replace("\", "/")
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
@@ -32,8 +32,8 @@ Public Class Form_Mobil_Tambah
             Sign_In.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Sign_In.ClassMobil.AddDataKoleksiDatabaseMobil(Sign_In.ClassMobil.JenisMobilProperty,
-                                                          Sign_In.ClassMobil.dirGambarBukuProperty,
+        Sign_In.ClassMobil.AddDataDatabaseMobil(Sign_In.ClassMobil.JenisMobilProperty,
+                                                          Sign_In.ClassMobil.dirGambarMobilProperty,
                                                           Sign_In.ClassMobil.TipeMobilProperty,
                                                           Sign_In.ClassMobil.TahunPembuatanProperty,
                                                           Sign_In.ClassMobil.KondisiMobilProperty,

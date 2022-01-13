@@ -1,27 +1,17 @@
 ﻿Public Class BukuPenjualan
-    'Public Shared ClassMobil As ClassMobil
-    'Public Shared Penjualan As Penjualan
-    'Public Shared ClassJenisMobil As ClassJenisMobil
-    'Public Shared Pembeli As Pembeli
-    'Public Shared Testing_JenisMobil As DatabaseJenisMobil
-
-    'Public Shared Form_Mobil As Form_Mobil
-
+    Public Shared DatabaseMobil As DatabaseMobil
+    Public Shared DatabasePembeli As DatabasePembeli
 
     Public Shared selectedtablepenjualan
     Public Shared selectedtablepenjualannama As String
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-        'ClassMobil = New ClassMobil()
-        'Penjualan = New Penjualan()
-        'ClassJenisMobil = New ClassJenisMobil()
-        'Pembeli = New Pembeli()
-        'Form_Mobil = New Form_Mobil()
+        DatabaseMobil = New DatabaseMobil()
+        DatabasePembeli = New DatabasePembeli()
 
         ReloadDataTableDatabase()
 
-        'UpdateDataTableArrayList()
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
@@ -35,7 +25,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataGridView1.DataSource = Sign_In.Penjualan.GetDataKoleksiDatabase()
+        DataGridView1.DataSource = Sign_In.Penjualan.GetDataPenjualanDatabase()
     End Sub
 
     Private Sub DataGridKoleksi_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -48,7 +38,7 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim selectedKoleksi As List(Of String) = Sign_In.Penjualan.GetDataKoleksiByIDDatabase(selectedtablepenjualan)
+        Dim selectedKoleksi As List(Of String) = Sign_In.Penjualan.GetDataPenjualanByIDDatabase(selectedtablepenjualan)
         Sign_In.Penjualan.CTipeMobilproperty = selectedKoleksi(2)
         Sign_In.Penjualan.CNamaPembeliproperty = selectedKoleksi(4)
         Sign_In.Penjualan.harga_terjualproperty = selectedKoleksi(5)
@@ -93,5 +83,14 @@
 
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles BtnRefresh.Click
         ReloadDataTableDatabase()
+    End Sub
+
+    Private Sub BukuPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BukuPenjualanToolStripMenuItem.Click
+        MessageBox.Show("Form Sudah Terbuka")
+    End Sub
+
+    Private Sub AdminDataAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminDataAccountToolStripMenuItem.Click
+        Dim DataUser = New DataUsers
+        DataUser.Show()
     End Sub
 End Class
