@@ -24,7 +24,7 @@ Public Class ClassJenisMobil
     Private password As String = " "
     Private database As String = "dbmobil"
 
-    Public Function GetDataKoleksiDatabaseJenisMobil() As DataTable
+    Public Function GetDataDatabaseJenisMobil() As DataTable
         Dim result As New DataTable
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
@@ -75,7 +75,7 @@ Public Class ClassJenisMobil
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_jenis_mobil,
                                     jenis_mobil
-                                    FROM tb_jenismobil
+                                    FROM jenismobil
                                     WHERE id_jenis_mobil='" & ID & "'"
 
         sqlRead = sqlCommand.ExecuteReader

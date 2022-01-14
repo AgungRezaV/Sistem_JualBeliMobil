@@ -31,10 +31,10 @@ Partial Class BukuPenjualan
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdminDataAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnRefresh = New System.Windows.Forms.Button()
-        Me.AdminDataAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +108,12 @@ Partial Class BukuPenjualan
         Me.BukuPenjualanToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.BukuPenjualanToolStripMenuItem.Text = "Buku Penjualan"
         '
+        'AdminDataAccountToolStripMenuItem
+        '
+        Me.AdminDataAccountToolStripMenuItem.Name = "AdminDataAccountToolStripMenuItem"
+        Me.AdminDataAccountToolStripMenuItem.Size = New System.Drawing.Size(130, 20)
+        Me.AdminDataAccountToolStripMenuItem.Text = "Admin Data Account"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -138,12 +144,6 @@ Partial Class BukuPenjualan
         Me.BtnRefresh.TabIndex = 10
         Me.BtnRefresh.Text = "Refresh"
         Me.BtnRefresh.UseVisualStyleBackColor = True
-        '
-        'AdminDataAccountToolStripMenuItem
-        '
-        Me.AdminDataAccountToolStripMenuItem.Name = "AdminDataAccountToolStripMenuItem"
-        Me.AdminDataAccountToolStripMenuItem.Size = New System.Drawing.Size(130, 20)
-        Me.AdminDataAccountToolStripMenuItem.Text = "Admin Data Account"
         '
         'BukuPenjualan
         '

@@ -31,7 +31,6 @@
             MessageBox.Show("Silahkan Pilih Terlebih Dahulu Nilai yang ingin di pilih")
         Else
             Sign_In.Penjualan.CTipeMobilproperty = selectedDatabaseMobilTipeMobil
-            MessageBox.Show(selectedDatabaseMobilTipeMobil)
             EditPenjualan.Activate()
         End If
 

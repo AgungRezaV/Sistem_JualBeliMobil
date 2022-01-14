@@ -22,19 +22,19 @@ Partial Class EditJenisMobil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnTmbhJenis = New System.Windows.Forms.Button()
+        Me.BtnEditJenis = New System.Windows.Forms.Button()
         Me.TxtboxJenis = New System.Windows.Forms.TextBox()
         Me.lblJenis = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'BtnTmbhJenis
+        'BtnEditJenis
         '
-        Me.BtnTmbhJenis.Location = New System.Drawing.Point(379, 95)
-        Me.BtnTmbhJenis.Name = "BtnTmbhJenis"
-        Me.BtnTmbhJenis.Size = New System.Drawing.Size(75, 23)
-        Me.BtnTmbhJenis.TabIndex = 11
-        Me.BtnTmbhJenis.Text = "Edit"
-        Me.BtnTmbhJenis.UseVisualStyleBackColor = True
+        Me.BtnEditJenis.Location = New System.Drawing.Point(379, 95)
+        Me.BtnEditJenis.Name = "BtnEditJenis"
+        Me.BtnEditJenis.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEditJenis.TabIndex = 11
+        Me.BtnEditJenis.Text = "Edit"
+        Me.BtnEditJenis.UseVisualStyleBackColor = True
         '
         'TxtboxJenis
         '
@@ -58,7 +58,7 @@ Partial Class EditJenisMobil
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(484, 132)
-        Me.Controls.Add(Me.BtnTmbhJenis)
+        Me.Controls.Add(Me.BtnEditJenis)
         Me.Controls.Add(Me.TxtboxJenis)
         Me.Controls.Add(Me.lblJenis)
         Me.Name = "EditJenisMobil"
@@ -68,7 +68,7 @@ Partial Class EditJenisMobil
 
     End Sub
 
-    Friend WithEvents BtnTmbhJenis As Button
+    Friend WithEvents BtnEditJenis As Button
     Friend WithEvents TxtboxJenis As TextBox
     Friend WithEvents lblJenis As Label
 End Class

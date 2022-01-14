@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabaseJenisMobil()
-        DataGridView1.DataSource = Sign_In.ClassJenisMobil.GetDataKoleksiDatabaseJenisMobil()
+        DataGridView1.DataSource = Sign_In.ClassJenisMobil.GetDataDatabaseJenisMobil()
     End Sub
 
     Private Sub Testing_JenisMobil_Form_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -32,7 +32,7 @@
 
     Private Sub BtnSelect_Click(sender As Object, e As EventArgs) Handles BtnSelect.Click
         If selectedTable = 0 Then
-            MessageBox.Show("Gakada nilai")
+            MessageBox.Show("Silahkan Pilih Terlebih dahulu")
         Else
             Form_Mobil.Activate()
         End If

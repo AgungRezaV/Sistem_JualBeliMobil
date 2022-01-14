@@ -1,7 +1,7 @@
 ﻿Public Class JenisMobil
     Public Shared ClassJenisMobil As ClassJenisMobil
-    Public Shared selectedTableKoleksi
-    Public Shared selectedTableKoleksiNama
+    Public Shared selectedTableIDJenisMobil
+    Public Shared selectedTableJenisMobilNama
 
     Public Sub New()
         ClassJenisMobil = New ClassJenisMobil()
@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DG.DataSource = ClassJenisMobil.GetDataKoleksiDatabaseJenisMobil()
+        DG.DataSource = ClassJenisMobil.GetDataDatabaseJenisMobil()
     End Sub
 
     Private Sub JenisMobil_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -30,13 +30,13 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DG.Rows(index)
 
-        selectedTableKoleksi = selectedRow.Cells(0).Value
-        selectedTableKoleksiNama = selectedRow.Cells(1).Value
+        selectedTableIDJenisMobil = selectedRow.Cells(0).Value
+        selectedTableJenisMobilNama = selectedRow.Cells(1).Value
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Dim SelectedKoleksi As List(Of String) = ClassJenisMobil.GetDataJenisMobilByIDDatabase(selectedTableKoleksi)
-        ClassJenisMobil.Jenis_MobilProperty = SelectedKoleksi(1)
+        Dim SelectedKoleksi As List(Of String) = ClassJenisMobil.GetDataJenisMobilByIDDatabase(selectedTableIDJenisMobil)
+        Sign_In.ClassJenisMobil.Jenis_MobilProperty = SelectedKoleksi(1)
 
         Dim form_baru2 = New EditJenisMobil
         form_baru2.Show()

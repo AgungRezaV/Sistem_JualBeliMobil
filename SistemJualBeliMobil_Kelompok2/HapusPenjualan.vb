@@ -3,7 +3,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        Lblisi.Text = BukuPenjualan.selectedtablepenjualannama
+        Lblisi.Text = BukuPenjualan.selectedtablepenjualan
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub

@@ -3,14 +3,14 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        LblText.Text = Form_Mobil.SelectedTableKoleksiTipeMobil
+        LblText.Text = Form_Mobil.SelectedTableMobilTipeMobil
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
         'Perpus.Koleksi.RemoveKoleksi(Perpus.ListBoxKoleksi.SelectedItem)
-        Sign_In.ClassMobil.DeleteDataMobilByIDDatabaseMobil(Form_Mobil.SelectedTableKoleksi)
+        Sign_In.ClassMobil.DeleteDataMobilByIDDatabaseMobil(Form_Mobil.SelectedTableIDMobil)
         For Each Control As Control In Form_Mobil.Controls
             If TypeOf Control Is TextBox Then
                 Control.Text = String.Empty

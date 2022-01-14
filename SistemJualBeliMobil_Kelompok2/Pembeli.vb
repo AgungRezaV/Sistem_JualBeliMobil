@@ -44,12 +44,6 @@ Public Class Pembeli
         End Set
     End Property
 
-    Public Shared selectedtablekoleksi
-    Public Sub updatedatatablearraylist()
-        'Rows.Clear()
-
-    End Sub
-
     Public ReadOnly Property getpembelidatatable() As ArrayList
         Get
             Return PembeliDataTamble
@@ -61,8 +55,6 @@ Public Class Pembeli
 
         dbConn.ConnectionString = "server = " + server + " ;" + "user id = " + username + " ;" _
                                 + "password = " + password + " ;" + "database = " + database
-
-        '   dbConn.ConnectionString = "server = " + server + ";" + "Nik=" + Nik + ";" + "user id=" + Nama + ";" + "database = " + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT id_pembeli AS 'ID',

@@ -1,14 +1,12 @@
 ﻿Public Class Form_Mobil
-    Public Shared SelectedTableKoleksi
-    Public Shared SelectedTableKoleksiNama
-    Public Shared SelectedTableKoleksiTipeMobil
-
+    Public Shared SelectedTableIDMobil
+    Public Shared SelectedTableMobilNama
+    Public Shared SelectedTableMobilTipeMobil
     Dim BoolVal As Integer
 
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-
         ' Add any initialization after the InitializeComponent() call
         BtnUpdate.Enabled = False
     End Sub
@@ -51,8 +49,7 @@
             Sign_In.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Sign_In.ClassMobil.AddDataDatabaseMobil(
-                                               DatabaseJenisMobil.selectedTable,
+        Sign_In.ClassMobil.AddDataDatabaseMobil(DatabaseJenisMobil.selectedTable,
                                                Sign_In.ClassMobil.dirGambarMobilProperty,
                                                Sign_In.ClassMobil.TipeMobilProperty,
                                                Sign_In.ClassMobil.TahunPembuatanProperty,
@@ -81,17 +78,17 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridView1.Rows(index)
 
-        SelectedTableKoleksi = selectedRow.Cells(0).Value
-        SelectedTableKoleksiNama = selectedRow.Cells(1).Value
-        SelectedTableKoleksiTipeMobil = selectedRow.Cells(3).Value
-        BoolVal = SelectedTableKoleksi
+        SelectedTableIDMobil = selectedRow.Cells(0).Value
+        SelectedTableMobilNama = selectedRow.Cells(1).Value
+        SelectedTableMobilTipeMobil = selectedRow.Cells(3).Value
+        BoolVal = SelectedTableIDMobil
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         If BoolVal < 1 Then
             MessageBox.Show("Tolong Pilih Terlebih Dahulu Table yang ingin di Edit")
         Else
-            Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataMobilByIDDatabaseMobil(SelectedTableKoleksi)
+            Dim SelectedKoleksi As List(Of String) = Sign_In.ClassMobil.GetDataMobilByIDDatabaseMobil(SelectedTableIDMobil)
             Sign_In.ClassMobil.JenisMobilProperty = SelectedKoleksi(2)
             Sign_In.ClassMobil.dirGambarMobilProperty = SelectedKoleksi(3)
             Sign_In.ClassMobil.TipeMobilProperty = SelectedKoleksi(4)
@@ -134,7 +131,7 @@
             Sign_In.ClassMobil.KondisiMobilProperty = "Bekas"
         End If
 
-        Sign_In.ClassMobil.UpdateDataMobilByIDDatabaseMobil(SelectedTableKoleksi,
+        Sign_In.ClassMobil.UpdateDataMobilByIDDatabaseMobil(SelectedTableIDMobil,
                                                   DatabaseJenisMobil.selectedTable,
                                                   Sign_In.ClassMobil.dirGambarMobilProperty,
                                                   Sign_In.ClassMobil.TipeMobilProperty,

@@ -65,28 +65,9 @@ Public Class users
         End Set
     End Property
 
-    'Public Function CheckAuth(username As String, ByVal plainPassword As String) As String
-
-    '    For Each user_data In getDataUsers()
-    '        Dim username_table As String = user_data(0)
-    '        Dim password_table As String = user_data(1)
-    '        Dim email_table As String = user_data(2)
-    '        If String.Compare(username_table, username) = 0 Then
-    '            If String.Compare(username_table, username) = 0 And String.Compare(EncrypData(plainPassword), password_table) = 0 Then
-    '                Return True
-    '            Else
-    '                Return False
-    '            End If
-    '        End If
-    '    Next
-
-    '    Return False
-    'End Function
-
     Public Function addDataUsers(realUsername As String,
                                  realPassword As String,
                                  realEmail As String)
-
         DataUsers.Add({realUsername,
           EncrypData(realPassword),
           realEmail})
@@ -112,8 +93,6 @@ Public Class users
 
     Public Function AddUsersDatabase(username_regist As String, password_regist As String, email_regist As String)
         Try
-
-
             dbConn.ConnectionString = "server=" + server + ";" + "user id=" + username_db + ";" + "password=" + password_db + ";" + "database=" + database
             dbConn.Open()
             sqlCommand.Connection = dbConn
@@ -121,11 +100,7 @@ Public Class users
                         VALUE('" & username_regist & "','" _
                                 & EncryptMD5(password_regist) & "', '" _
                                  & email_regist & "')"
-
-
-
             Debug.WriteLine(sqlQuery)
-
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
 
