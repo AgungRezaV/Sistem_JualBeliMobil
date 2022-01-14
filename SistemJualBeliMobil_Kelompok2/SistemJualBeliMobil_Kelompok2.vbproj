@@ -200,12 +200,6 @@
     <Compile Include="Form_Mobil_Hapus.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Mobil_Tambah.Designer.vb">
-      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Mobil_Tambah.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HapusDataPembeli.Designer.vb">
       <DependentUpon>HapusDataPembeli.vb</DependentUpon>
     </Compile>
@@ -298,9 +292,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Mobil_Hapus.resx">
       <DependentUpon>Form_Mobil_Hapus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Mobil_Tambah.resx">
-      <DependentUpon>Form_Mobil_Tambah.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapusDataPembeli.resx">
       <DependentUpon>HapusDataPembeli.vb</DependentUpon>
