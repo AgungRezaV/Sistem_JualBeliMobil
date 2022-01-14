@@ -45,15 +45,15 @@ Partial Class Form_Mobil
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.TBTahunPembuatan = New System.Windows.Forms.TextBox()
         Me.CBGaransi = New System.Windows.Forms.ComboBox()
-        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnEditJenisMobil = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBKondisiMobil.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,7 +217,7 @@ Partial Class Form_Mobil
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(500, 418)
+        Me.BtnTambah.Location = New System.Drawing.Point(581, 418)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 20
@@ -226,7 +226,7 @@ Partial Class Form_Mobil
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(581, 418)
+        Me.BtnHapus.Location = New System.Drawing.Point(662, 418)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 21
@@ -235,7 +235,8 @@ Partial Class Form_Mobil
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(662, 418)
+        Me.BtnEdit.Enabled = False
+        Me.BtnEdit.Location = New System.Drawing.Point(743, 418)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 22
@@ -257,15 +258,6 @@ Partial Class Form_Mobil
         Me.CBGaransi.Name = "CBGaransi"
         Me.CBGaransi.Size = New System.Drawing.Size(217, 21)
         Me.CBGaransi.TabIndex = 24
-        '
-        'BtnUpdate
-        '
-        Me.BtnUpdate.Location = New System.Drawing.Point(743, 418)
-        Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(75, 23)
-        Me.BtnUpdate.TabIndex = 25
-        Me.BtnUpdate.Text = "Update"
-        Me.BtnUpdate.UseVisualStyleBackColor = True
         '
         'BtnEditJenisMobil
         '
@@ -309,6 +301,12 @@ Partial Class Form_Mobil
         Me.BukuPenjualanToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.BukuPenjualanToolStripMenuItem.Text = "Buku Penjualan"
         '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.UsersToolStripMenuItem.Text = "Users"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -319,11 +317,15 @@ Partial Class Form_Mobil
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "Input Data"
         '
-        'UsersToolStripMenuItem
+        'Button2
         '
-        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
-        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.UsersToolStripMenuItem.Text = "Users"
+        Me.Button2.Location = New System.Drawing.Point(12, 418)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 23)
+        Me.Button2.TabIndex = 45
+        Me.Button2.Text = "Edit Gambar"
+        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Form_Mobil
         '
@@ -331,10 +333,10 @@ Partial Class Form_Mobil
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnEditJenisMobil)
-        Me.Controls.Add(Me.BtnUpdate)
         Me.Controls.Add(Me.CBGaransi)
         Me.Controls.Add(Me.TBTahunPembuatan)
         Me.Controls.Add(Me.BtnEdit)
@@ -391,7 +393,6 @@ Partial Class Form_Mobil
     Friend WithEvents BtnEdit As Button
     Friend WithEvents TBTahunPembuatan As TextBox
     Friend WithEvents CBGaransi As ComboBox
-    Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnEditJenisMobil As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MobilToolStripMenuItem As ToolStripMenuItem
@@ -400,4 +401,5 @@ Partial Class Form_Mobil
     Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label8 As Label
     Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button2 As Button
 End Class

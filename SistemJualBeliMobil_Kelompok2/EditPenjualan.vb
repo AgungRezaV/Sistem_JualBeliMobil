@@ -9,8 +9,15 @@
         TBMobilTerjual.Text = Sign_In.Penjualan.CTipeMobilproperty
         TBPembeli.Text = Sign_In.Penjualan.CNamaPembeliproperty
         Txtboxhargaterjual.Text = Sign_In.Penjualan.harga_terjualproperty
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.CustomFormat = "yyyy/MM/dd"
+
+
+
+        If Sign_In.Penjualan.tanggal_penjualan <> "" Then
+            'MessageBox.Show("Dari Edit" + Sign_In.Penjualan.tanggal_penjualan)
+            DateTimePicker1.Format = DateTimePickerFormat.Custom
+            DateTimePicker1.CustomFormat = "yyyy/MM/dd"
+            DateTimePicker1.Value = Sign_In.Penjualan.tanggal_penjualan
+        End If
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub

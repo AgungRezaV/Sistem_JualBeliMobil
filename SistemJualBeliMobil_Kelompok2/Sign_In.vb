@@ -4,7 +4,7 @@
     Public Shared Penjualan As Penjualan
     Public Shared ClassJenisMobil As ClassJenisMobil
     Public Shared Pembeli As Pembeli
-    Public Shared Testing_JenisMobil As DatabaseJenisMobil
+    Public Shared DatabaseJenisMobil As DatabaseJenisMobil
 
     Public Shared Form_Mobil As Form_Mobil
 
@@ -21,6 +21,7 @@
         ClassJenisMobil = New ClassJenisMobil()
         Pembeli = New Pembeli()
         Form_Mobil = New Form_Mobil()
+        DatabaseJenisMobil = New DatabaseJenisMobil()
 
     End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click

@@ -8,17 +8,17 @@ Public Class Form_Mobil_Tambah
 
     End Sub
 
-    Private Sub BtnTambahGambar_Click(sender As Object, e As EventArgs) Handles BtnTambahGambar.Click
-        OpenFileDialog1.Title = "Open Foto"
-        OpenFileDialog1.Filter = "|*.*"
-        OpenFileDialog1.ShowDialog()
-        Dim picKoleksiDir As String = OpenFileDialog1.FileName
+    'Private Sub BtnTambahGambar_Click(sender As Object, e As EventArgs) Handles BtnTambahGambar.Click
+    '    OpenFileDialog1.Title = "Open Foto"
+    '    OpenFileDialog1.Filter = "|*.*"
+    '    OpenFileDialog1.ShowDialog()
+    '    Dim picKoleksiDir As String = OpenFileDialog1.FileName
 
-        PBFoto.Load(picKoleksiDir)
-        PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
-        Sign_In.ClassMobil.dirGambarMobilProperty = picKoleksiDir.ToString()
-        Sign_In.ClassMobil.dirGambarMobilProperty = Sign_In.ClassMobil.dirGambarMobilProperty.Replace("\", "/")
-    End Sub
+    '    PBFoto.Load(picKoleksiDir)
+    '    PBFoto.SizeMode = PictureBoxSizeMode.StretchImage
+    '    Sign_In.ClassMobil.dirGambarMobilProperty = picKoleksiDir.ToString()
+    '    Sign_In.ClassMobil.dirGambarMobilProperty = Sign_In.ClassMobil.dirGambarMobilProperty.Replace("\", "/")
+    'End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
         Sign_In.ClassMobil.TipeMobilProperty = TBTipeMobil.Text.ToString()

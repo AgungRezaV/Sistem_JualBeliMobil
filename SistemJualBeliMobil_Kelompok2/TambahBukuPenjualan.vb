@@ -16,6 +16,8 @@
                                                  DatabasePembeli.selectedDatabasePembeli,
                                                  Sign_In.Penjualan.harga_terjualproperty,
                                                  Sign_In.Penjualan.tanggal_penjualan)
+        DatabaseMobil.selectedDatabaseMobilTipeMobil = ""
+        DatabasePembeli.selectedDatabaseNamaPembeli = ""
         Me.Close()
     End Sub
 
