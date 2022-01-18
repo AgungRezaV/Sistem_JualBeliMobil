@@ -30,16 +30,18 @@ Partial Class SignUp
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxEmail = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Montserrat", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(114, 13)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 22)
+        Me.Label3.Size = New System.Drawing.Size(169, 20)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "CREATE ACCOUNT"
         '
@@ -103,11 +105,25 @@ Partial Class SignUp
         Me.TextBoxEmail.Size = New System.Drawing.Size(233, 20)
         Me.TextBoxEmail.TabIndex = 18
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(327, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(380, 187)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -118,6 +134,7 @@ Partial Class SignUp
         Me.Controls.Add(Me.Label1)
         Me.Name = "SignUp"
         Me.Text = "SignUp"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -131,4 +148,5 @@ Partial Class SignUp
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxEmail As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

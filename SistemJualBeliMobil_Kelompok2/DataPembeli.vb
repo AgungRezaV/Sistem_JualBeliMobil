@@ -73,4 +73,6 @@ Public Class DataPembeli
     Private Sub PembeliToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PembeliToolStripMenuItem.Click
         MessageBox.Show("Form Sudah Terbuka")
     End Sub
+
+
 End Class

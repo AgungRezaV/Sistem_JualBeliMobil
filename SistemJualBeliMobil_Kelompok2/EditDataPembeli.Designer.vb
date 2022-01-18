@@ -30,6 +30,8 @@ Partial Class EditDataPembeli
         Me.ButtonEditData = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.RichTextBoxAlmt = New System.Windows.Forms.RichTextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -103,11 +105,25 @@ Partial Class EditDataPembeli
         Me.RichTextBoxAlmt.TabIndex = 30
         Me.RichTextBoxAlmt.Text = ""
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(262, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
         'EditDataPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(308, 294)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RichTextBoxAlmt)
         Me.Controls.Add(Me.ButtonEditData)
         Me.Controls.Add(Me.Label4)
@@ -118,6 +134,7 @@ Partial Class EditDataPembeli
         Me.Controls.Add(Me.Label1)
         Me.Name = "EditDataPembeli"
         Me.Text = "EditDataPembeli"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -131,4 +148,5 @@ Partial Class EditDataPembeli
     Friend WithEvents ButtonEditData As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents RichTextBoxAlmt As RichTextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -32,14 +32,14 @@ Partial Class DatabaseJenisMobil
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(5, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(249, 193)
+        Me.DataGridView1.Size = New System.Drawing.Size(207, 193)
         Me.DataGridView1.TabIndex = 0
         '
         'BtnSelect
         '
         Me.BtnSelect.Location = New System.Drawing.Point(5, 212)
         Me.BtnSelect.Name = "BtnSelect"
-        Me.BtnSelect.Size = New System.Drawing.Size(249, 23)
+        Me.BtnSelect.Size = New System.Drawing.Size(207, 23)
         Me.BtnSelect.TabIndex = 2
         Me.BtnSelect.Text = "Select"
         Me.BtnSelect.UseVisualStyleBackColor = True
@@ -48,7 +48,8 @@ Partial Class DatabaseJenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(260, 242)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(217, 242)
         Me.Controls.Add(Me.BtnSelect)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "DatabaseJenisMobil"

@@ -54,16 +54,20 @@ Partial Class Form_Mobil
         Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBKondisiMobil.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 50)
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 77)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(806, 166)
         Me.DataGridView1.TabIndex = 0
@@ -71,7 +75,7 @@ Partial Class Form_Mobil
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(144, 275)
+        Me.Label1.Location = New System.Drawing.Point(144, 302)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 1
@@ -80,7 +84,7 @@ Partial Class Form_Mobil
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(144, 315)
+        Me.Label2.Location = New System.Drawing.Point(144, 342)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 13)
         Me.Label2.TabIndex = 2
@@ -89,7 +93,7 @@ Partial Class Form_Mobil
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(144, 356)
+        Me.Label3.Location = New System.Drawing.Point(144, 383)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 13)
         Me.Label3.TabIndex = 3
@@ -98,7 +102,7 @@ Partial Class Form_Mobil
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(144, 396)
+        Me.Label4.Location = New System.Drawing.Point(144, 423)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(41, 13)
         Me.Label4.TabIndex = 4
@@ -107,7 +111,7 @@ Partial Class Form_Mobil
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(497, 278)
+        Me.Label5.Location = New System.Drawing.Point(497, 305)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(36, 13)
         Me.Label5.TabIndex = 5
@@ -116,7 +120,7 @@ Partial Class Form_Mobil
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(497, 320)
+        Me.Label6.Location = New System.Drawing.Point(497, 347)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(43, 13)
         Me.Label6.TabIndex = 6
@@ -125,7 +129,7 @@ Partial Class Form_Mobil
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(497, 356)
+        Me.Label7.Location = New System.Drawing.Point(497, 383)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(73, 13)
         Me.Label7.TabIndex = 7
@@ -134,7 +138,7 @@ Partial Class Form_Mobil
         'TBJenisMobil
         '
         Me.TBJenisMobil.Enabled = False
-        Me.TBJenisMobil.Location = New System.Drawing.Point(265, 275)
+        Me.TBJenisMobil.Location = New System.Drawing.Point(265, 302)
         Me.TBJenisMobil.Name = "TBJenisMobil"
         Me.TBJenisMobil.ReadOnly = True
         Me.TBJenisMobil.Size = New System.Drawing.Size(130, 20)
@@ -142,7 +146,7 @@ Partial Class Form_Mobil
         '
         'TBTipeMobil
         '
-        Me.TBTipeMobil.Location = New System.Drawing.Point(265, 315)
+        Me.TBTipeMobil.Location = New System.Drawing.Point(265, 342)
         Me.TBTipeMobil.Name = "TBTipeMobil"
         Me.TBTipeMobil.Size = New System.Drawing.Size(211, 20)
         Me.TBTipeMobil.TabIndex = 9
@@ -173,7 +177,7 @@ Partial Class Form_Mobil
         '
         Me.GBKondisiMobil.Controls.Add(Me.RBBekas)
         Me.GBKondisiMobil.Controls.Add(Me.RBBaru)
-        Me.GBKondisiMobil.Location = New System.Drawing.Point(265, 396)
+        Me.GBKondisiMobil.Location = New System.Drawing.Point(265, 423)
         Me.GBKondisiMobil.Name = "GBKondisiMobil"
         Me.GBKondisiMobil.Size = New System.Drawing.Size(187, 45)
         Me.GBKondisiMobil.TabIndex = 13
@@ -182,21 +186,21 @@ Partial Class Form_Mobil
         '
         'TBHarga
         '
-        Me.TBHarga.Location = New System.Drawing.Point(601, 278)
+        Me.TBHarga.Location = New System.Drawing.Point(601, 305)
         Me.TBHarga.Name = "TBHarga"
         Me.TBHarga.Size = New System.Drawing.Size(217, 20)
         Me.TBHarga.TabIndex = 14
         '
         'TBHargaDefault
         '
-        Me.TBHargaDefault.Location = New System.Drawing.Point(601, 356)
+        Me.TBHargaDefault.Location = New System.Drawing.Point(601, 383)
         Me.TBHargaDefault.Name = "TBHargaDefault"
         Me.TBHargaDefault.Size = New System.Drawing.Size(217, 20)
         Me.TBHargaDefault.TabIndex = 16
         '
         'PBFoto
         '
-        Me.PBFoto.Location = New System.Drawing.Point(12, 275)
+        Me.PBFoto.Location = New System.Drawing.Point(12, 302)
         Me.PBFoto.Name = "PBFoto"
         Me.PBFoto.Size = New System.Drawing.Size(122, 137)
         Me.PBFoto.TabIndex = 18
@@ -204,7 +208,7 @@ Partial Class Form_Mobil
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 418)
+        Me.Button1.Location = New System.Drawing.Point(12, 445)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 23)
         Me.Button1.TabIndex = 19
@@ -217,7 +221,7 @@ Partial Class Form_Mobil
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(581, 418)
+        Me.BtnTambah.Location = New System.Drawing.Point(581, 445)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 20
@@ -226,7 +230,7 @@ Partial Class Form_Mobil
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(662, 418)
+        Me.BtnHapus.Location = New System.Drawing.Point(662, 445)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 21
@@ -236,7 +240,7 @@ Partial Class Form_Mobil
         'BtnEdit
         '
         Me.BtnEdit.Enabled = False
-        Me.BtnEdit.Location = New System.Drawing.Point(743, 418)
+        Me.BtnEdit.Location = New System.Drawing.Point(743, 445)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 22
@@ -245,7 +249,7 @@ Partial Class Form_Mobil
         '
         'TBTahunPembuatan
         '
-        Me.TBTahunPembuatan.Location = New System.Drawing.Point(265, 356)
+        Me.TBTahunPembuatan.Location = New System.Drawing.Point(265, 383)
         Me.TBTahunPembuatan.Name = "TBTahunPembuatan"
         Me.TBTahunPembuatan.Size = New System.Drawing.Size(211, 20)
         Me.TBTahunPembuatan.TabIndex = 23
@@ -254,14 +258,14 @@ Partial Class Form_Mobil
         '
         Me.CBGaransi.FormattingEnabled = True
         Me.CBGaransi.Items.AddRange(New Object() {"1 Tahun", "2 Tahun", "5 Tahun", "Life-Time Warranty"})
-        Me.CBGaransi.Location = New System.Drawing.Point(601, 320)
+        Me.CBGaransi.Location = New System.Drawing.Point(601, 347)
         Me.CBGaransi.Name = "CBGaransi"
         Me.CBGaransi.Size = New System.Drawing.Size(217, 21)
         Me.CBGaransi.TabIndex = 24
         '
         'BtnEditJenisMobil
         '
-        Me.BtnEditJenisMobil.Location = New System.Drawing.Point(401, 273)
+        Me.BtnEditJenisMobil.Location = New System.Drawing.Point(401, 300)
         Me.BtnEditJenisMobil.Name = "BtnEditJenisMobil"
         Me.BtnEditJenisMobil.Size = New System.Drawing.Size(75, 23)
         Me.BtnEditJenisMobil.TabIndex = 26
@@ -310,16 +314,16 @@ Partial Class Form_Mobil
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(356, 230)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(356, 257)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(130, 29)
+        Me.Label8.Size = New System.Drawing.Size(120, 25)
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "Input Data"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 418)
+        Me.Button2.Location = New System.Drawing.Point(12, 445)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(122, 23)
         Me.Button2.TabIndex = 45
@@ -327,12 +331,25 @@ Partial Class Form_Mobil
         Me.Button2.UseVisualStyleBackColor = True
         Me.Button2.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(774, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 46
+        Me.PictureBox1.TabStop = False
+        '
         'Form_Mobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(830, 450)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(830, 521)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.MenuStrip1)
@@ -365,6 +382,7 @@ Partial Class Form_Mobil
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -402,4 +420,5 @@ Partial Class Form_Mobil
     Friend WithEvents Label8 As Label
     Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

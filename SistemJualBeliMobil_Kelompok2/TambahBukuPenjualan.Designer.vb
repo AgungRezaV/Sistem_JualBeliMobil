@@ -34,22 +34,24 @@ Partial Class TambahBukuPenjualan
         Me.ButtonTambah = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblTmbhBuku
         '
         Me.LblTmbhBuku.AutoSize = True
-        Me.LblTmbhBuku.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTmbhBuku.Location = New System.Drawing.Point(74, 23)
+        Me.LblTmbhBuku.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTmbhBuku.Location = New System.Drawing.Point(66, 23)
         Me.LblTmbhBuku.Name = "LblTmbhBuku"
-        Me.LblTmbhBuku.Size = New System.Drawing.Size(282, 29)
+        Me.LblTmbhBuku.Size = New System.Drawing.Size(268, 25)
         Me.LblTmbhBuku.TabIndex = 1
         Me.LblTmbhBuku.Text = "Tambah Buku Penjualan"
         '
         'LblMobilID
         '
         Me.LblMobilID.AutoSize = True
-        Me.LblMobilID.Location = New System.Drawing.Point(19, 80)
+        Me.LblMobilID.Location = New System.Drawing.Point(11, 80)
         Me.LblMobilID.Name = "LblMobilID"
         Me.LblMobilID.Size = New System.Drawing.Size(56, 13)
         Me.LblMobilID.TabIndex = 2
@@ -58,7 +60,7 @@ Partial Class TambahBukuPenjualan
         'LblHargaTerjual
         '
         Me.LblHargaTerjual.AutoSize = True
-        Me.LblHargaTerjual.Location = New System.Drawing.Point(19, 155)
+        Me.LblHargaTerjual.Location = New System.Drawing.Point(11, 155)
         Me.LblHargaTerjual.Name = "LblHargaTerjual"
         Me.LblHargaTerjual.Size = New System.Drawing.Size(71, 13)
         Me.LblHargaTerjual.TabIndex = 6
@@ -67,7 +69,7 @@ Partial Class TambahBukuPenjualan
         'LblPembeliID
         '
         Me.LblPembeliID.AutoSize = True
-        Me.LblPembeliID.Location = New System.Drawing.Point(18, 117)
+        Me.LblPembeliID.Location = New System.Drawing.Point(10, 117)
         Me.LblPembeliID.Name = "LblPembeliID"
         Me.LblPembeliID.Size = New System.Drawing.Size(75, 13)
         Me.LblPembeliID.TabIndex = 7
@@ -76,7 +78,7 @@ Partial Class TambahBukuPenjualan
         'LblTanggalJual
         '
         Me.LblTanggalJual.AutoSize = True
-        Me.LblTanggalJual.Location = New System.Drawing.Point(19, 189)
+        Me.LblTanggalJual.Location = New System.Drawing.Point(11, 189)
         Me.LblTanggalJual.Name = "LblTanggalJual"
         Me.LblTanggalJual.Size = New System.Drawing.Size(81, 13)
         Me.LblTanggalJual.TabIndex = 8
@@ -85,7 +87,7 @@ Partial Class TambahBukuPenjualan
         'TextBoxMobilTerjual
         '
         Me.TextBoxMobilTerjual.Enabled = False
-        Me.TextBoxMobilTerjual.Location = New System.Drawing.Point(159, 77)
+        Me.TextBoxMobilTerjual.Location = New System.Drawing.Point(151, 77)
         Me.TextBoxMobilTerjual.Name = "TextBoxMobilTerjual"
         Me.TextBoxMobilTerjual.Size = New System.Drawing.Size(167, 20)
         Me.TextBoxMobilTerjual.TabIndex = 14
@@ -93,21 +95,21 @@ Partial Class TambahBukuPenjualan
         'TextBoxPembeli
         '
         Me.TextBoxPembeli.Enabled = False
-        Me.TextBoxPembeli.Location = New System.Drawing.Point(159, 114)
+        Me.TextBoxPembeli.Location = New System.Drawing.Point(151, 114)
         Me.TextBoxPembeli.Name = "TextBoxPembeli"
         Me.TextBoxPembeli.Size = New System.Drawing.Size(167, 20)
         Me.TextBoxPembeli.TabIndex = 15
         '
         'TxtBoxHargaTerjual
         '
-        Me.TxtBoxHargaTerjual.Location = New System.Drawing.Point(159, 152)
+        Me.TxtBoxHargaTerjual.Location = New System.Drawing.Point(151, 152)
         Me.TxtBoxHargaTerjual.Name = "TxtBoxHargaTerjual"
         Me.TxtBoxHargaTerjual.Size = New System.Drawing.Size(248, 20)
         Me.TxtBoxHargaTerjual.TabIndex = 16
         '
         'DateTimePickerJual
         '
-        Me.DateTimePickerJual.Location = New System.Drawing.Point(159, 189)
+        Me.DateTimePickerJual.Location = New System.Drawing.Point(151, 189)
         Me.DateTimePickerJual.Name = "DateTimePickerJual"
         Me.DateTimePickerJual.Size = New System.Drawing.Size(248, 20)
         Me.DateTimePickerJual.TabIndex = 19
@@ -115,7 +117,7 @@ Partial Class TambahBukuPenjualan
         'ButtonTambah
         '
         Me.ButtonTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonTambah.Location = New System.Drawing.Point(20, 227)
+        Me.ButtonTambah.Location = New System.Drawing.Point(12, 227)
         Me.ButtonTambah.Name = "ButtonTambah"
         Me.ButtonTambah.Size = New System.Drawing.Size(387, 46)
         Me.ButtonTambah.TabIndex = 23
@@ -124,7 +126,7 @@ Partial Class TambahBukuPenjualan
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(332, 77)
+        Me.Button1.Location = New System.Drawing.Point(324, 77)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 24
@@ -133,18 +135,32 @@ Partial Class TambahBukuPenjualan
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(332, 114)
+        Me.Button2.Location = New System.Drawing.Point(324, 114)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 25
         Me.Button2.Text = "Edit"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(355, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 26
+        Me.PictureBox1.TabStop = False
+        '
         'TambahBukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(441, 299)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(419, 299)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonTambah)
@@ -159,6 +175,7 @@ Partial Class TambahBukuPenjualan
         Me.Controls.Add(Me.LblTmbhBuku)
         Me.Name = "TambahBukuPenjualan"
         Me.Text = "TambahBukuPenjualan"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,4 +192,5 @@ Partial Class TambahBukuPenjualan
     Friend WithEvents ButtonTambah As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

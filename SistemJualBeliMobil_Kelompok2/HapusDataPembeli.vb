@@ -12,6 +12,8 @@
         Sign_In.Pembeli.DeleteDataPembeliByIDDatabase(DataPembeli.SelectedId)
         Me.Close()
     End Sub
+
+
 End Class
 
 

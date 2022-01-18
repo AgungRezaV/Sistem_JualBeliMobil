@@ -31,7 +31,7 @@ Partial Class DatabasePembeli
         '
         Me.Button1.Location = New System.Drawing.Point(12, 134)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(732, 23)
+        Me.Button1.Size = New System.Drawing.Size(423, 23)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Select"
         Me.Button1.UseVisualStyleBackColor = True
@@ -41,14 +41,15 @@ Partial Class DatabasePembeli
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(732, 116)
+        Me.DataGridView1.Size = New System.Drawing.Size(423, 116)
         Me.DataGridView1.TabIndex = 2
         '
         'DatabasePembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(753, 165)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(450, 165)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "DatabasePembeli"

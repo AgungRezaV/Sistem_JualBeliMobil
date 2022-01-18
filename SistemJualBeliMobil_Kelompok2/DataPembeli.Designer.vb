@@ -32,13 +32,15 @@ Partial Class DataPembeli
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonTambahData
         '
-        Me.ButtonTambahData.Location = New System.Drawing.Point(102, 245)
+        Me.ButtonTambahData.Location = New System.Drawing.Point(68, 260)
         Me.ButtonTambahData.Name = "ButtonTambahData"
         Me.ButtonTambahData.Size = New System.Drawing.Size(112, 23)
         Me.ButtonTambahData.TabIndex = 37
@@ -48,24 +50,27 @@ Partial Class DataPembeli
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(215, 27)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(181, 43)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(102, 29)
+        Me.Label4.Size = New System.Drawing.Size(110, 25)
         Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Pembeli"
+        Me.Label4.Text = "PEMBELI"
         '
         'DataGridView1
         '
+        Me.DataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 59)
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridView1.Location = New System.Drawing.Point(28, 74)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(503, 180)
+        Me.DataGridView1.Size = New System.Drawing.Size(425, 180)
         Me.DataGridView1.TabIndex = 38
         '
         'ButtonEdit
         '
-        Me.ButtonEdit.Location = New System.Drawing.Point(220, 245)
+        Me.ButtonEdit.Location = New System.Drawing.Point(186, 260)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(112, 23)
         Me.ButtonEdit.TabIndex = 40
@@ -74,7 +79,7 @@ Partial Class DataPembeli
         '
         'ButtonHapus
         '
-        Me.ButtonHapus.Location = New System.Drawing.Point(338, 245)
+        Me.ButtonHapus.Location = New System.Drawing.Point(304, 260)
         Me.ButtonHapus.Name = "ButtonHapus"
         Me.ButtonHapus.Size = New System.Drawing.Size(112, 23)
         Me.ButtonHapus.TabIndex = 41
@@ -86,7 +91,7 @@ Partial Class DataPembeli
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(550, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(479, 24)
         Me.MenuStrip1.TabIndex = 42
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -114,11 +119,25 @@ Partial Class DataPembeli
         Me.BukuPenjualanToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.BukuPenjualanToolStripMenuItem.Text = "Buku Penjualan"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(409, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 43
+        Me.PictureBox1.TabStop = False
+        '
         'DataPembeli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(550, 274)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(479, 290)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ButtonHapus)
         Me.Controls.Add(Me.ButtonEdit)
@@ -130,6 +149,7 @@ Partial Class DataPembeli
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +165,5 @@ Partial Class DataPembeli
     Friend WithEvents JenisMobilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PembeliToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -31,13 +31,15 @@ Partial Class JenisMobil
         Me.JenisMobilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PembeliToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BukuPenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(29, 248)
+        Me.BtnTambah.Location = New System.Drawing.Point(36, 295)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 12
@@ -46,7 +48,7 @@ Partial Class JenisMobil
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(110, 248)
+        Me.BtnEdit.Location = New System.Drawing.Point(117, 295)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 11
@@ -55,7 +57,7 @@ Partial Class JenisMobil
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(191, 248)
+        Me.BtnHapus.Location = New System.Drawing.Point(198, 295)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 10
@@ -64,10 +66,11 @@ Partial Class JenisMobil
         '
         'DG
         '
+        Me.DG.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DG.Location = New System.Drawing.Point(10, 27)
+        Me.DG.Location = New System.Drawing.Point(36, 74)
         Me.DG.Name = "DG"
-        Me.DG.Size = New System.Drawing.Size(279, 215)
+        Me.DG.Size = New System.Drawing.Size(237, 204)
         Me.DG.TabIndex = 9
         '
         'MenuStrip1
@@ -75,7 +78,7 @@ Partial Class JenisMobil
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(298, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(300, 24)
         Me.MenuStrip1.TabIndex = 13
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -103,11 +106,25 @@ Partial Class JenisMobil
         Me.BukuPenjualanToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.BukuPenjualanToolStripMenuItem.Text = "Buku Penjualan"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(229, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        '
         'JenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(298, 274)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(300, 346)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.BtnEdit)
@@ -118,6 +135,7 @@ Partial Class JenisMobil
         CType(Me.DG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -132,4 +150,5 @@ Partial Class JenisMobil
     Friend WithEvents JenisMobilToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PembeliToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BukuPenjualanToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

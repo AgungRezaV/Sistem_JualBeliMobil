@@ -42,16 +42,19 @@ Partial Class BukuPenjualan
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(7, 74)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(747, 264)
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 264)
         Me.DataGridView1.TabIndex = 3
         '
         'BtnTambah
         '
+        Me.BtnTambah.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.BtnTambah.Location = New System.Drawing.Point(470, 344)
         Me.BtnTambah.Name = "BtnTambah"
+        Me.BtnTambah.Padding = New System.Windows.Forms.Padding(5)
         Me.BtnTambah.Size = New System.Drawing.Size(82, 30)
         Me.BtnTambah.TabIndex = 4
         Me.BtnTambah.Text = "Tambah"
@@ -80,7 +83,7 @@ Partial Class BukuPenjualan
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MobilToolStripMenuItem, Me.JenisMobilToolStripMenuItem, Me.PembeliToolStripMenuItem, Me.BukuPenjualanToolStripMenuItem, Me.AdminDataAccountToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(761, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(754, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -117,10 +120,11 @@ Partial Class BukuPenjualan
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.InfoText
         Me.Label1.Location = New System.Drawing.Point(268, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 29)
+        Me.Label1.Size = New System.Drawing.Size(214, 25)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "BUKU PENJUALAN"
         '
@@ -129,7 +133,7 @@ Partial Class BukuPenjualan
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
-        Me.PictureBox1.Location = New System.Drawing.Point(710, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(705, 27)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -149,7 +153,8 @@ Partial Class BukuPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 381)
+        Me.BackColor = System.Drawing.Color.DarkCyan
+        Me.ClientSize = New System.Drawing.Size(754, 381)
         Me.Controls.Add(Me.BtnRefresh)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)

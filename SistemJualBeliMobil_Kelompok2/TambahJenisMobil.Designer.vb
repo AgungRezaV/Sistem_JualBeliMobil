@@ -25,6 +25,8 @@ Partial Class TambahJenisMobil
         Me.BtnTmbhJenis = New System.Windows.Forms.Button()
         Me.TxtboxJenis = New System.Windows.Forms.TextBox()
         Me.lblJenis = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnTmbhJenis
@@ -53,16 +55,31 @@ Partial Class TambahJenisMobil
         Me.lblJenis.TabIndex = 6
         Me.lblJenis.Text = "Jenis Mobil :"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.SistemJualBeliMobil_Kelompok2.My.Resources.Resources.Logo_SistemJualBeliMobil_VB
+        Me.PictureBox1.Location = New System.Drawing.Point(408, 1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(44, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'TambahJenisMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(488, 157)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnTmbhJenis)
         Me.Controls.Add(Me.TxtboxJenis)
         Me.Controls.Add(Me.lblJenis)
         Me.Name = "TambahJenisMobil"
         Me.Text = "TambahJenisMobil"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -71,4 +88,5 @@ Partial Class TambahJenisMobil
     Friend WithEvents BtnTmbhJenis As Button
     Friend WithEvents TxtboxJenis As TextBox
     Friend WithEvents lblJenis As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

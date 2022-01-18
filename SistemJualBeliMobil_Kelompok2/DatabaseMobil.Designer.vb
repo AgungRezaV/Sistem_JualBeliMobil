@@ -48,6 +48,7 @@ Partial Class DatabaseMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(756, 182)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
